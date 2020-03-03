@@ -1,0 +1,52 @@
+doctype html
+html
+
+    head
+    meta(charser = 'utf-8')
+    title Webpack App
+    body
+        button.b-prev prev
+        button.b-next next
+        div(class='wrapper')
+            include includes/header.pug
+            .slider
+                .slider-list
+                    .slide
+                        .block-1
+                            .bl
+                                .num 01
+                                .title АРТГИД
+                                hr
+                                .text Редизайн новостного сайта
+                                .text Проектирование и дизайн
+                            .text-2 2020
+                        .block-2
+                            img(src=require('./../img/main-page/artguide.jpg'))
+                    .slide
+                        .block-1
+                            .bl
+                                .num 02
+                                .title CHLOE
+                                hr
+                                .text Редизайн интернет-магазина
+                                .text Проектирование и дизайн
+                            .text-2 2019
+                        .block-2
+                            img(src=require('./../img/main-page/chloe.jpg'))
+                    .slide
+                        .block-1
+                            .bl
+                                .num 03
+                                .title BOSTON
+                                hr
+                                .text Лендинг клубного дома
+                                .text Проектирование и дизайн
+                            .text-2 2019
+                        .block-2
+                            img(src=require('./../img/main-page/boston.jpg'))
+
+
+
+
+
+
