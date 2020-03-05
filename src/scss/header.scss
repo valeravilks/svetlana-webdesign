@@ -1,0 +1,31 @@
+.header{
+  display: flex;
+  padding-top: 50px;
+  justify-content: flex-end;
+  align-items: center;
+  opacity: 1;
+  transform: translateX(0px);
+  transition: transform .5s ease, opacity .5s ease;
+  transition-delay: .5s;
+
+  &.hide{
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  .lang{
+    margin-left: 100px;
+    font-size: 10px;
+    color: #898989;
+  }
+
+  nav{
+    a{
+      font-size: 16px;
+      margin-left: 50px;
+      &:hover{
+
+      }
+    }
+  }
+}

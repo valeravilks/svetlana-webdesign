@@ -16,8 +16,8 @@ let conf = {
             template: 'src/html/index.pug'
         }),
         new HtmlWebpackPlugin({
-            filename: "aa/gg.html",
-            template: 'src/html/aa/gg.pug'
+            filename: "boston/index.html",
+            template: 'src/html/work/boston-ru.pug'
         })
     ],
     module: {

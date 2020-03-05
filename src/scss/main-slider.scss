@@ -1,0 +1,130 @@
+.slider{
+  position: relative;
+  padding-top: 100px;
+  opacity: 0;
+
+  .slide{
+    display: flex;
+    position: absolute;
+    opacity: 0;
+
+    &.load{
+      transform: scale(1);
+      opacity: 1;
+
+      .block-2{
+        transform: translateX(0px);
+        opacity: 1;
+      }
+
+      .block-1{
+        .text-1, .text-2, .text-3{
+          transform: translateY(0px);
+          opacity: 1;
+      }
+
+        .title {
+          transform: translateX(0px);
+          opacity: 1;
+        }
+
+        .num{
+          opacity: 1;
+      }
+
+        hr{
+          width: 100%;
+          opacity: 1;
+      }
+    }
+
+
+  }
+
+    &.preload{
+
+    }
+
+    &.show{
+      .title{
+
+      }
+    }
+
+    .block-1{
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      .num{
+        align-self: flex-start;
+        margin-bottom: 70px;
+        opacity: 0;
+        transition: opacity .5s ease;
+        transition-delay: 2s;
+    }
+      .title{
+        font-size: 80px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        margin-bottom: 20px;
+        transform: translateX(-100px);
+        transition: transform .5s ease, opacity .5s ease;
+        transition-delay: .1s;
+        opacity: 0;
+      }
+      hr{
+        margin-bottom: 20px;
+        border: 0.5px solid #D7D7D7;
+        width: 0;
+        transition: opacity .5s ease, width .5s ease;
+        transition-delay: .5s;
+        opacity: 0;
+      }
+      .text-1{
+        color: #898989;
+        margin-bottom: 10px;
+        font-size: 12px;
+        align-self: flex-end;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: transform .5s ease, opacity .5s ease;
+        transition-delay: 1s;
+
+    }
+      .text-2{
+        color: #898989;
+        margin-bottom: 10px;
+        font-size: 12px;
+        align-self: flex-end;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: transform .5s ease, opacity .5s ease;
+        transition-delay: 1.2s;
+    }
+      .text-3{
+        color: #898989;
+        font-size: 12px;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: transform .5s ease, opacity .5s ease;
+        transition-delay: 1.4s;
+
+    }
+      .bl{
+        display: flex;
+        flex-direction: column;
+    }
+    }
+
+    .block-2{
+      max-width: 700px;
+      padding-left: 50px;
+      transform: translateX(200px);
+      transition: transform .5s ease, opacity .5s ease;
+      opacity: 0;
+    }
+  }
+}

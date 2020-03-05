@@ -1,0 +1,41 @@
+doctype html
+html
+
+    head
+    meta(charser = 'utf-8')
+    title Webpack App
+    body.work
+        .wrapper
+            include ../includes/header.pug
+            section.first
+                .title BOSTON
+                .block
+                    .text Лендинг клубного дома
+                    .text Проектирование и дизайн
+                    .text Ноябрь 2019
+                .for-link
+                    a.link Behance
+                .content
+                    p Клубный дом Boston - это аппартаменты с уникальной архитектурой и интерьерами, в которых видимая роскошь сочетается с комфортом.
+                    p В ходе выполнения проекта был проведен конкурентный анализ, построена удобная структура и отрисована визуальная концепция в стиле минимализма.
+        img.img-1(src=require('img/boston-1.jpg'))
+        .wrapper
+            .content-2
+                p Страница сайта позволяет пользователю ознакомится с расположением и характеристиками, оценить преимущества и предложения клубного дома, а в завершении оставить заявку, заполнив форму обратной связи.
+            .content-3
+                img.img-2(src=require('img/boston-2.jpg'))
+            .content-2
+                p Также была проектирована адаптивная версия сайта, посредством которой сайт корректно отображается на все устройствах.
+            .content-4
+                img.img-2(src=require('img/boston-3.jpg'))
+        .work-footer
+            .wrapper
+                .cont
+                    .block-1
+                        .text-1 Следующий проект
+                        .text-2 АРТГИД
+                    .block-2
+                        img(src=require('img/main-page/artguide.jpg'))
+        footer
+            .wrapper
+                .text &#169 2020 Svetlana Tsymbalyuk
