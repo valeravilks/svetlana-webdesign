@@ -1,33 +1,38 @@
 doctype html
 html
-
     head
     meta(charser = 'utf-8')
     title Webpack App
     body.work
         .wrapper
-            include ../includes/header.pug
+            include ../includes/header-not-animate
             section.first
-                .title BOSTON
+                .title(data-aos="fade-in") BOSTON
                 .block
                     .text Лендинг клубного дома
                     .text Проектирование и дизайн
                     .text Ноябрь 2019
-                .for-link
-                    a.link Behance
+                a.link Behance
                 .content
                     p Клубный дом Boston - это аппартаменты с уникальной архитектурой и интерьерами, в которых видимая роскошь сочетается с комфортом.
                     p В ходе выполнения проекта был проведен конкурентный анализ, построена удобная структура и отрисована визуальная концепция в стиле минимализма.
-        img.img-1(src=require('img/boston-1.jpg'))
+        img.img-1(src=require('img/boston/boston-1.jpg'))
         .wrapper
             .content-2
                 p Страница сайта позволяет пользователю ознакомится с расположением и характеристиками, оценить преимущества и предложения клубного дома, а в завершении оставить заявку, заполнив форму обратной связи.
-            .content-3
-                img.img-2(src=require('img/boston-2.jpg'))
+            .content-3(data-aos="fade-up")
+                img.img-2(src=require('img/boston/boston-2.jpg'))
             .content-2
                 p Также была проектирована адаптивная версия сайта, посредством которой сайт корректно отображается на все устройствах.
             .content-4
-                img.img-2(src=require('img/boston-3.jpg'))
+                .bl.bl-1
+                    img.img-2(src=require('img/boston/1.png'))
+                    img.img-2(src=require('img/boston/2.png'))
+                    img.img-2(src=require('img/boston/3.png'))
+                .bl
+                    img.img-2(src=require('img/boston/4.png'))
+                    img.img-2(src=require('img/boston/5.png'))
+                    img.img-2(src=require('img/boston/6.png'))
         .work-footer
             .wrapper
                 .cont

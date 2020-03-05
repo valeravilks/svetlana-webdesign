@@ -18,6 +18,14 @@ let conf = {
         new HtmlWebpackPlugin({
             filename: "boston/index.html",
             template: 'src/html/work/boston-ru.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: "art-guide/index.html",
+            template: 'src/html/work/art-guide-ru.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: "chloe/index.html",
+            template: 'src/html/work/chloe-ru.pug'
         })
     ],
     module: {
@@ -33,7 +41,7 @@ let conf = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.(s|)css$/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,

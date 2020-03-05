@@ -10,7 +10,12 @@ body{
   background-color: #F9F9F9;
 }
 
-
+.mb100{
+  margin-bottom: 100px;
+}
+.mb50{
+  margin-bottom: 50px;
+}
 //html{
 //  cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADLSURBVHgBtZXRDYIwEIZ/cYGO0A1cwU1kA0ZoN3AFN3AE4wZuUDbg2Se8E0guROtVrl/yNTyQj0shFPiOIzvySiZynOXrG3kiPQrgYCAHEcsZNFG/mk5rQmb6f6M/41uiMu5kNBhEF6PcgtFQfumuoeUIW3gr2j0tZxR+jwqeTYUoc9hh2hdzGlSCwz3s6Tn8gD3v8B32XHjh7077J9PqlydEw2iUo/PUySCa8AGPSr/NLfFsVBKVwWG+16EAT7aYDs60mo4P2C4XfAFsptf2Gzw0AwAAAABJRU5ErkJggg=='), auto;
 //}
@@ -49,11 +54,8 @@ a{
     margin-bottom: 10px;
   }
 
-  .for-link{
-    position: relative;
-  }
+
   .link{
-    position: absolute;
     background: linear-gradient(to right, black 50%, white 50%);
     background-size: 200% 100%;
     background-position: right bottom;
@@ -92,7 +94,41 @@ a{
     padding: 0 100px;
   }
   .content-4{
-    padding: 0 100px 200px;
+    padding: 0 100px 100px;
+    .bl-1{
+      margin-bottom: 100px;
+    }
+
+    .bl{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .content-6{
+    display: flex;
+    padding: 0 100px 100px;
+    justify-content: space-between;
+  }
+
+  .content-7{
+    display: flex;
+    padding: 0 150px 100px;
+    justify-content: space-between;
+
+    .block-1{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      :last-child{
+        padding-bottom: 15px;
+      }
+    }
+
+    .block-2{
+      display: flex;
+      flex-direction: column;
+    }
   }
   .work-footer{
     background-color: #282828;

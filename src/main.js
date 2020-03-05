@@ -2,6 +2,10 @@ import './scss/style.scss';
 import $ from 'jquery';
 import 'jquery-mousewheel';
 import Slider from './js/main-slider';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 //
 // $('.slide').addClass('hide');
@@ -30,7 +34,3 @@ window.onload = function(){
 let slider = new Slider({
     entry: '.slider'
 });
-
-
-
-
