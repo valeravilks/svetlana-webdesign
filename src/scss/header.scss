@@ -3,15 +3,10 @@
   padding-top: 50px;
   justify-content: flex-end;
   align-items: center;
-  opacity: 1;
-  transform: translateX(0px);
-  transition: transform .5s ease, opacity .5s ease;
-  transition-delay: .5s;
-
-  &.hide{
-    opacity: 0;
-    transform: translateX(80px);
-  }
+  opacity: 0;
+  //transform: translateX(0px);
+  //transition: transform .5s ease, opacity .5s ease;
+  //transition-delay: .5s;
 
   .lang{
     margin-left: 100px;
@@ -28,4 +23,7 @@
       }
     }
   }
+}
+.o-0{
+  opacity: 0;
 }

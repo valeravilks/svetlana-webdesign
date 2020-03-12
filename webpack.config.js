@@ -1,6 +1,6 @@
 let path = require('path');
 let MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 let conf = {
     entry: './src/main.js',
@@ -8,6 +8,7 @@ let conf = {
         path: path.resolve(__dirname, './dist/'),
         filename: 'main-page.js'
     },
+    devtool: 'source-map',
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'styles.css',
@@ -26,6 +27,10 @@ let conf = {
         new HtmlWebpackPlugin({
             filename: "chloe/index.html",
             template: 'src/html/work/chloe-ru.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: "info/index.html",
+            template: 'src/html/info.pug'
         })
     ],
     module: {
@@ -78,9 +83,9 @@ let conf = {
                     {
                         loader: 'url-loader',
                         options: {
-                            outputPath: 'images',
+                            outputPath: 'img',
                             name: '[name][hash].[ext]',
-                            limit: 8192
+                            limit: 10
                         },
                     },
                 ],
