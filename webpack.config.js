@@ -109,7 +109,8 @@ let conf = {
             src: path.join(__dirname, 'src'),
             pug: path.resolve(__dirname, 'src/html'),
             img: path.resolve(__dirname, 'src/img'),
-            style: path.resolve(__dirname, 'src/scss')
+            style: path.resolve(__dirname, 'src/scss'),
+            "animation.gsap": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
         },
         extensions: [
             ".sass",
