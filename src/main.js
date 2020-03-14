@@ -45,30 +45,45 @@ if($('body').hasClass('info')){
 
         $('.wrapper').removeClass('o-0');
         infoPageTimeline
+            .addLabel('only')
             .fromTo(
             '.header',
             {x: 50, opacity: 0},
-            {x: 0, opacity: 1, duration: 1}
+            {x: 0, opacity: 1, duration: 1},
+            'only'
             )
             .from(
                 infoSplitText.lines,
                 1,
-                { y: '+=100', opacity: 0, stagger: 0.3, rotation: 5, ease: 'Power3.easeOut' }
+                { y: '+=100', opacity: 0, stagger: 0.3, rotation: 5, ease: 'Power3.easeOut' },
+                'only'
             );
 
         infoPageTimeline.eventCallback("onComplete", function(){
             $('.content').removeClass('o-0');
+
             document.querySelectorAll('.js-info-animate').forEach(function(element){
-                let contentAnimation = gsap.fromTo(element, {x: 150, opacity: 0}, {x: 0, opacity: 1, duration: 1});
+                let blockAnimate = gsap.timeline();
+
+                blockAnimate
+                    .addLabel('only')
+                    .fromTo($(element).find('.block-1'), {x: -150, opacity: 0}, {x: 0, opacity: 1, duration: 0.3}, 'only')
+                    .fromTo($(element).find('.block-2'), {x: 150, opacity: 0}, {x: 0, opacity: 1, duration: 0.3}, 'only');
+
                 var contentSM = new ScrollMagic.Scene({
                     triggerElement: element,
-                    triggerHook: 0.8,
+                    triggerHook: 0.8
                 })
-                    .setTween(contentAnimation)
+                    .setTween(blockAnimate)
                     .addTo(controller);
             });
+
+
         });
     }
+}
+if($('body').hasClass('home')){
+
 }
 
 
