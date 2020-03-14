@@ -67,87 +67,91 @@ export default class{
                     this.animation = false
                 }
             });
+
+            let currentSlideDom = this.slide.eq(this.currentSlide);
+            let nextSlideDom = this.slide.eq(nextSlide);
+
             nextTimeline
-                .addLabel('title')
-                .addLabel('img')
-                .fromTo(this.slide.eq(this.currentSlide).find('.title'), {x: 0}, {
+                .addLabel('Start')
+                .fromTo(currentSlideDom.find('.title'), {x: 0}, {
                     x: 50,
                     opacity: 0,
-                    duration: 0.9
-                }, 'title')
-                .fromTo(this.slide.eq(nextSlide).find('.title'), {x: -50}, {
+                    duration: 0.5
+                }, 'Start')
+                .fromTo(nextSlideDom.find('.title'), {x: -50}, {
                     x: 0,
                     opacity: 1,
-                    duration: 0.9,
-                    delay: 0.9
-                }, 'title')
-                .set(this.slide.eq(this.currentSlide).find('.block-2 .img-cover'), {right: ''}, 'img')
-                .fromTo(this.slide.eq(this.currentSlide).find('.block-2 .img-cover'),
+                    duration: 0.5
+                }, 'Start+=0.7')
+                .set(currentSlideDom.find('.block-2 .img-cover'),
+                    {right: ''}, 'Start+=0.3')
+                .fromTo(currentSlideDom.find('.block-2 .img-cover'),
                     {width: '0'},
-                    {width: '100%', ease: 'Power4.easeIn'})
-                .set(this.slide.eq(this.currentSlide).find('.block-2'), {opacity: 0})
-                .set(this.slide.eq(nextSlide).find('.block-2'), {opacity: 1})
-                .set(this.slide.eq(nextSlide).find('.block-2 .img-cover'), {right: 0})
-                .fromTo(this.slide.eq(nextSlide).find('.block-2 .img-cover'),
+                    {width: '100%', ease: 'Expo.easeIn', duration: 0.5}, 'Start+=0.3')
+                .set(currentSlideDom.find('.block-2'), {opacity: 0}, 'Start+=1')
+                .set(nextSlideDom.find('.block-2'), {opacity: 1}, 'Start+=1')
+                .set(nextSlideDom.find('.block-2 .img-cover'),
+                    {right: 0}, 'Start+=1')
+                .fromTo(nextSlideDom.find('.block-2 .img-cover'),
                     {width: '100%'},
-                    {width: '0', ease: 'Power4.easeIn'})
-                .fromTo(this.slide.eq(this.currentSlide).find('.text-1'), {x: 0}, {
+                    {width: '0', ease: 'Expo.easeIn', duration: 0.5}, 'Start+=1.1')
+                .fromTo(currentSlideDom.find('.text-1'),
+                    {x: 0},
+                    {
                     x: 0,
                     opacity: 0,
                     duration: 0.5,
-                }, 'title')
-                .fromTo(this.slide.eq(nextSlide).find('.text-1'), {x: 0}, {
+                }, 'Start+=0.3')
+                .fromTo(nextSlideDom.find('.text-1'), {x: 0}, {
                     x: 0,
                     opacity: 1,
                     duration: 0.5,
                     delay: 0.5
-                }, 'title')
-                .fromTo(this.slide.eq(this.currentSlide).find('.text-2'), {x: 0}, {
+                }, 'Start+=0.8')
+                .fromTo(currentSlideDom.find('.text-2'), {x: 0}, {
                     x: 0,
                     opacity: 0,
                     duration: 0.5,
-                }, 'title')
-                .fromTo(this.slide.eq(nextSlide).find('.text-2'), {x: 0}, {
+                }, 'Start+=0.3')
+                .fromTo(nextSlideDom.find('.text-2'), {x: 0}, {
                     x: 0,
                     opacity: 1,
                     duration: 0.5,
                     delay: 0.5
-                }, 'title')
-                .fromTo(this.slide.eq(this.currentSlide).find('.text-3'), {x: 0}, {
+                }, 'Start+=0.8')
+                .fromTo(currentSlideDom.find('.text-3'), {x: 0}, {
                     x: 0,
                     opacity: 0,
                     duration: 0.5,
-                }, 'title')
-                .fromTo(this.slide.eq(nextSlide).find('.text-3'), {x: 0}, {
+                }, 'Start+=0.3')
+                .fromTo(nextSlideDom.find('.text-3'), {x: 0}, {
                     x: 0,
                     opacity: 1,
                     duration: 0.5,
                     delay: 0.5
-                }, 'title')
-                .addLabel('hr', '-=1')
-                .fromTo(this.slide.eq(this.currentSlide).find('hr'), {width: '100%'}, {
+                }, 'Start+=0.8')
+                .fromTo(currentSlideDom.find('hr'), {width: '100%'}, {
                     width: '0%',
                     opacity: 0,
                     duration: 0.5
-                }, 'title')
-                .fromTo(this.slide.eq(nextSlide).find('hr'), {width: '0%'}, {
+                }, 'Start+=0.3')
+                .fromTo(nextSlideDom.find('hr'), {width: '0%'}, {
                     opacity: 1,
                     width: '100%',
                     duration: 0.5,
                     delay: 0.5
-                }, 'title')
-
-                .fromTo(this.slide.eq(this.currentSlide).find('.num'), {x: 0}, {
+                }, 'Start+=0.8')
+                .fromTo(currentSlideDom.find('.num'), {x: 0}, {
                     x: 0,
                     opacity: 0,
                     duration: 0.5
-                }, 'title')
-                .fromTo(this.slide.eq(nextSlide).find('.num'), {x: -50}, {
+                }, 'Start+=0.3')
+                .fromTo(nextSlideDom.find('.num'), {x: -50}, {
                     x: 0,
                     opacity: 1,
                     duration: 0.5,
                     delay: 1
-                }, 'title')
+                }, 'Start+=0.8')
 
             this.currentSlide = nextSlide;
         }
