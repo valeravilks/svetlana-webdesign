@@ -144,6 +144,27 @@
       max-width: 700px;
       padding-left: 50px;
       opacity: 0;
+
+      .img-block{
+        width: 500px;
+        height: 350px;
+        position: relative;
+        .cover{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
+        .img-cover{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          z-index: 11;
+          background-color: #F9F9F9;
+        }
+      }
     }
   }
 }

@@ -40,8 +40,11 @@ export default class{
                     {opacity: 0, x: -50},
                     {opacity: 1, x:0})
                 .fromTo(firstSlide.find('.block-2'),
-                    {opacity: 0, x: -50},
-                    {opacity: 1, x:0});
+                    {opacity: 0},
+                    {opacity: 1})
+                .fromTo(firstSlide.find('.block-2 .img-cover'),
+                    {width: '100%', right: 0},
+                    {width: '0', ease: 'Power4.easeIn'});
         });
 
     }
@@ -66,12 +69,56 @@ export default class{
             });
             nextTimeline
                 .addLabel('title')
+                .addLabel('img')
                 .fromTo(this.slide.eq(this.currentSlide).find('.title'), {x: 0}, {
                     x: 50,
                     opacity: 0,
-                    duration: 0.5
+                    duration: 0.9
                 }, 'title')
                 .fromTo(this.slide.eq(nextSlide).find('.title'), {x: -50}, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.9,
+                    delay: 0.9
+                }, 'title')
+                .set(this.slide.eq(this.currentSlide).find('.block-2 .img-cover'), {right: ''}, 'img')
+                .fromTo(this.slide.eq(this.currentSlide).find('.block-2 .img-cover'),
+                    {width: '0'},
+                    {width: '100%', ease: 'Power4.easeIn'})
+                .set(this.slide.eq(this.currentSlide).find('.block-2'), {opacity: 0})
+                .set(this.slide.eq(nextSlide).find('.block-2'), {opacity: 1})
+                .set(this.slide.eq(nextSlide).find('.block-2 .img-cover'), {right: 0})
+                .fromTo(this.slide.eq(nextSlide).find('.block-2 .img-cover'),
+                    {width: '100%'},
+                    {width: '0', ease: 'Power4.easeIn'})
+                .fromTo(this.slide.eq(this.currentSlide).find('.text-1'), {x: 0}, {
+                    x: 0,
+                    opacity: 0,
+                    duration: 0.5,
+                }, 'title')
+                .fromTo(this.slide.eq(nextSlide).find('.text-1'), {x: 0}, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.5,
+                    delay: 0.5
+                }, 'title')
+                .fromTo(this.slide.eq(this.currentSlide).find('.text-2'), {x: 0}, {
+                    x: 0,
+                    opacity: 0,
+                    duration: 0.5,
+                }, 'title')
+                .fromTo(this.slide.eq(nextSlide).find('.text-2'), {x: 0}, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.5,
+                    delay: 0.5
+                }, 'title')
+                .fromTo(this.slide.eq(this.currentSlide).find('.text-3'), {x: 0}, {
+                    x: 0,
+                    opacity: 0,
+                    duration: 0.5,
+                }, 'title')
+                .fromTo(this.slide.eq(nextSlide).find('.text-3'), {x: 0}, {
                     x: 0,
                     opacity: 1,
                     duration: 0.5,
@@ -82,13 +129,25 @@ export default class{
                     width: '0%',
                     opacity: 0,
                     duration: 0.5
-                }, 'hr')
+                }, 'title')
                 .fromTo(this.slide.eq(nextSlide).find('hr'), {width: '0%'}, {
                     opacity: 1,
                     width: '100%',
                     duration: 0.5,
                     delay: 0.5
-                }, 'hr')
+                }, 'title')
+
+                .fromTo(this.slide.eq(this.currentSlide).find('.num'), {x: 0}, {
+                    x: 0,
+                    opacity: 0,
+                    duration: 0.5
+                }, 'title')
+                .fromTo(this.slide.eq(nextSlide).find('.num'), {x: -50}, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.5,
+                    delay: 1
+                }, 'title')
 
             this.currentSlide = nextSlide;
         }
