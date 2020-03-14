@@ -47,11 +47,11 @@ export default class{
     }
     next(){
         this.slide.hasClass('load') ? this.slide.removeClass('load') : '';
-        if(!this.animation && this.start){
+        if(!this.animation && this.start) {
             this.animation = true;
             let nextSlide;
 
-            if(this.slideLenght > this.currentSlide + 1){
+            if (this.slideLenght > this.currentSlide + 1) {
                 nextSlide = this.currentSlide + 1;
             } else {
                 nextSlide = this.currentSlide + 1 - this.slideLenght;
@@ -59,16 +59,38 @@ export default class{
             // this.slide.eq(this.currentSlide).removeClass('show');
             // this.slide.eq(nextSlide).addClass('show');
 
-            let nextTimeline = gsap.timeline();
+            let nextTimeline = gsap.timeline({
+                onComplete: () => {
+                    this.animation = false
+                }
+            });
             nextTimeline
                 .addLabel('title')
-                .fromTo(this.slide.eq(this.currentSlide).find('.title'), {x: 0}, {x: 50, opacity: 0, duration: 0.5}, 'title')
-                .fromTo(this.slide.eq(nextSlide).find('.title'), {x: -50}, {x: 0, opacity: 1, duration: 0.5, delay: 0.5}, 'title')
+                .fromTo(this.slide.eq(this.currentSlide).find('.title'), {x: 0}, {
+                    x: 50,
+                    opacity: 0,
+                    duration: 0.5
+                }, 'title')
+                .fromTo(this.slide.eq(nextSlide).find('.title'), {x: -50}, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.5,
+                    delay: 0.5
+                }, 'title')
+                .addLabel('hr', '-=1')
+                .fromTo(this.slide.eq(this.currentSlide).find('hr'), {width: '100%'}, {
+                    width: '0%',
+                    opacity: 0,
+                    duration: 0.5
+                }, 'hr')
+                .fromTo(this.slide.eq(nextSlide).find('hr'), {width: '0%'}, {
+                    opacity: 1,
+                    width: '100%',
+                    duration: 0.5,
+                    delay: 0.5
+                }, 'hr')
 
             this.currentSlide = nextSlide;
-            setTimeout(() => {
-                this.animation = false
-            }, 1000);
         }
     };
     prev(){
