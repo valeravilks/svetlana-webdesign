@@ -14,7 +14,9 @@ import SplitText from './js/splitText';
 var controller = new ScrollMagic.Controller();
 
 window.onload = function(){
-    $('header').removeClass('hide');
+
+    gsap.fromTo('.header', {x: 50, opacity: 0}, {x:0, opacity: 1, delay: 0.5});
+
     $('body').on('mousewheel', function(event) {
         if(event.deltaY < 0){
             slider.next();
