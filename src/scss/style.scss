@@ -58,8 +58,9 @@ a{
   .link{
     background: linear-gradient(to right, black 50%, white 50%);
     background-size: 200% 100%;
+    display: inline-block;
     background-position: right bottom;
-    transition: all .5s ease-out;
+    transition: background .5s ease-out;
     border: 1px solid #282828;
     box-sizing: border-box;
     font-size: 12px;
@@ -139,6 +140,15 @@ a{
       color: #FFFFFF;
       margin-bottom: 30px;
     }
+
+    .cont:hover .text-2:before{
+      height: 100%;
+    }
+
+    .cont:hover .img-help{
+      opacity: 0;
+    }
+
     .text-2{
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: white;
@@ -146,6 +156,19 @@ a{
       font-size: 80px;
       line-height: 95px;
       letter-spacing: 0.1em;
+      position: relative;
+
+      &:before{
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 0;
+        left: 0;
+        color: #fff;
+        overflow: hidden;
+        transition: height .3s ease;
+      }
     }
 
     .cont{
@@ -154,11 +177,30 @@ a{
       align-items: center;
       justify-content: space-between;
     }
+    .block-2{
+      position: relative;
+      height: 350px;
+      overflow: hidden;
+
+      .img-help{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #282828;
+        opacity: 0.6;
+        transition: opacity .3s ease;
+      }
+    }
   }
 }
 footer{
-  background-color: #282828;
 
+  &.black{
+    background-color: #282828;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
 
   &.white{
     background-color: #F9F9F9;
@@ -253,4 +295,7 @@ footer{
     transition: opacity .3s ease, transform .3s ease;
     transform: translateX(-10  px);
   }
+}
+.pb-200{
+  padding-bottom: 200px!important;
 }

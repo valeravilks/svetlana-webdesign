@@ -17,6 +17,70 @@ window.onload = function(){
 
     gsap.fromTo('.header', {x: 50, opacity: 0}, {x:0, opacity: 1, delay: 0.5});
 
+    if($('body').hasClass('work')){
+        let timeline = gsap.timeline({
+            onComplete: () => {
+                document.querySelectorAll('.js-img-animate').forEach(function(element){
+                    let blockAnimate = gsap.timeline();
+
+                    blockAnimate
+                        .fromTo($(element), {y: 50, opacity: 0}, {y: 0, opacity: 1, duration: 0.3})
+
+                    var contentSM = new ScrollMagic.Scene({
+                        triggerElement: element,
+                        triggerHook: 0.8
+                    })
+                        .setTween(blockAnimate)
+                        .addTo(controller);
+                });
+
+                document.querySelectorAll('.js-text-animate').forEach(function(element){
+                    let blockAnimate = gsap.timeline();
+
+                    blockAnimate
+                        .fromTo($(element), {x: 50, opacity: 0}, {x: 0, opacity: 1, duration: 0.3})
+
+                    var contentSM = new ScrollMagic.Scene({
+                        triggerElement: element,
+                        triggerHook: 0.8
+                    })
+                        .setTween(blockAnimate)
+                        .addTo(controller);
+                });
+
+                document.querySelectorAll('.js-mob-animate').forEach(function(element){
+                    let blockAnimate = gsap.timeline();
+
+                    blockAnimate
+                        .fromTo($(element).find('img'), {opacity: 0}, {stagger: 0.3, opacity: 1, duration: 0.3})
+
+                    var contentSM = new ScrollMagic.Scene({
+                        triggerElement: element,
+                        triggerHook: 0.8
+                    })
+                        .setTween(blockAnimate)
+                        .addTo(controller);
+                });
+            }
+        });
+
+        timeline
+            .addLabel('s')
+            .fromTo('.title',
+                {x: 100, opacity: 0},
+                {x: 0, opacity: 1}, 's+=0.6')
+            .fromTo('.text',
+                {x: 100, opacity: 0},
+                {x: 0, stagger: 0.1, opacity: 1}, 's+=0.8')
+            .fromTo('.js-link',
+                {x: 100, opacity: 0},
+                {x: 0, opacity: 1}, 's+=1')
+            .fromTo('.content',
+                {x: 100, opacity: 0},
+                {x: 0, opacity: 1}, 's+=1.2')
+
+    }
+
     $('body').on('mousewheel', function(event) {
         if(event.deltaY < 0){
             slider.next();
@@ -84,8 +148,13 @@ if($('body').hasClass('info')){
         });
     }
 }
-if($('body').hasClass('home')){
+if($('body').hasClass('work')) {
+    $('.work-footer .block-2').hover(() => {
+        $('.work-footer .text-2:before').css('height', '100%')
+    }, () => {
 
+    })
 }
+
 
 
