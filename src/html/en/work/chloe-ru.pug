@@ -5,7 +5,13 @@ html
     title Webpack App
     body.work
         .wrapper
-            include ../includes/header
+            header.header
+                nav
+                    ul
+                        li
+                            a.link(href='/ru') Проекты
+                            a.link(href='/ru/info.html') Инфо
+                a.lang(href='/en') EN
             section.first
                 .title(data-aos="fade-in") CHLOE
                 .block
@@ -16,32 +22,32 @@ html
                 .content
                     p Chloe — французский дом моды, специализирующийся на выпуске одежды, обуви, аксессуаров и парфюмерии.
                     p Цель этого проекта — обновить внешний вид и структуру существующего интернет магазина.
-        img.img-1.js-img-animate(src=require('img/chloe/chloe-8.jpg'))
+        img.img-1.js-img-animate(src=require('./../../../img/chloe/chloe-8.jpg'))
         .wrapper
             .content-2
                 p.js-text-animate Дизайн выполнен таким образом, чтобы сосредоточить внимание пользователя на контенте и создать ощущение элегантности.
             .content-3.mb100.js-img-animate(data-aos="fade-up")
-                img.img-2(src=require('img/chloe/chloe-1.jpg'))
+                img.img-2(src=require('./../../../img/chloe/chloe-1.jpg'))
             .content-3.mb100.js-img-animate(data-aos="fade-up")
-                img.img-2(src=require('img/chloe/chloe-3.jpg'))
+                img.img-2(src=require('./../../../img/chloe/chloe-3.jpg'))
             .content-3.mb100.js-img-animate(data-aos="fade-up")
-                img.img-2(src=require('img/chloe/chloe-6.jpg'))
+                img.img-2(src=require('./../../../img/chloe/chloe-6.jpg'))
             .content-3.mb100.js-img-animate(data-aos="fade-up")
-                img.img-2(src=require('img/chloe/chloe-4.jpg'))
+                img.img-2(src=require('./../../../img/chloe/chloe-4.jpg'))
             .content-3.mb100.js-img-animate(data-aos="fade-up")
-                img.img-2(src=require('img/chloe/chloe-5.jpg'))
+                img.img-2(src=require('./../../../img/chloe/chloe-5.jpg'))
             .content-3.js-img-animate(data-aos="fade-up")
-                img.img-2(src=require('img/chloe/chloe-2.jpg'))
+                img.img-2(src=require('./../../../img/chloe/chloe-2.jpg'))
             .content-2
                 p.js-text-animate Также была проектирована адаптивная версия сайта, посредством которой сайт корректно отображается на все устройствах.
             .content-7
                 .block-1.js-mob-animate
-                    img(src=require('img/chloe/Tablet-3-min.png'))
-                    img(src=require('img/chloe/Tablet-2-min.png'))
-                    img(src=require('img/chloe/Tablet-1-min.png'))
+                    img(src=require('./../../../img/chloe/Tablet-3-min.png'))
+                    img(src=require('./../../../img/chloe/Tablet-2-min.png'))
+                    img(src=require('./../../../img/chloe/Tablet-1-min.png'))
                 .block-2.js-mob-animate
-                    img.mb50(src=require('img/chloe/641-min.png'))
-                    img(src=require('img/chloe/1-min.png'))
+                    img.mb50(src=require('./../../../img/chloe/641-min.png'))
+                    img(src=require('./../../../img/chloe/1-min.png'))
         .work-footer
             .wrapper
                 .cont
@@ -49,7 +55,7 @@ html
                         .text-1 Следующий проект
                         .text-2(data-text="BOSTON") BOSTON
                     .block-2
-                        img(src=require('img/main-page/03-min.jpg'))
+                        img(src=require('./../../../img/main-page/03-min.jpg'))
                         .img-help
         footer.black
             .wrapper

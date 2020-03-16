@@ -156,5 +156,9 @@ if($('body').hasClass('work')) {
     })
 }
 
+if($('body').hasClass('to-index')){
+    window.location.href = '/ru'
+}
+
 
 

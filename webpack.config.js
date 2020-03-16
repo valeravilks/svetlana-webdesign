@@ -17,20 +17,24 @@ let conf = {
             template: 'src/html/index.pug'
         }),
         new HtmlWebpackPlugin({
-            filename: "boston/index.html",
-            template: 'src/html/work/boston-ru.pug'
+            filename: "ru/index.html",
+            template: 'src/html/ru/index.pug'
         }),
         new HtmlWebpackPlugin({
-            filename: "art-guide/index.html",
-            template: 'src/html/work/art-guide-ru.pug'
+            filename: "ru/boston.html",
+            template: 'src/html/ru/work/boston-ru.pug'
         }),
         new HtmlWebpackPlugin({
-            filename: "chloe/index.html",
-            template: 'src/html/work/chloe-ru.pug'
+            filename: "ru/art-guide.html",
+            template: 'src/html/ru/work/art-guide-ru.pug'
         }),
         new HtmlWebpackPlugin({
-            filename: "info/index.html",
-            template: 'src/html/info.pug'
+            filename: "ru/chloe/index.html",
+            template: 'src/html/ru/work/chloe-ru.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: "ru/info.html",
+            template: 'src/html/ru/info.pug'
         })
     ],
     module: {
@@ -83,9 +87,10 @@ let conf = {
                     {
                         loader: 'url-loader',
                         options: {
-                            outputPath: 'img',
-                            name: '[name][hash].[ext]',
-                            limit: 10
+                            name: '[name].[ext]',
+                            publicPath: '/images/',
+                            outputPath: 'images/',
+                            limit: 20
                         },
                     },
                 ],
