@@ -87,6 +87,7 @@ a{
 
 }
 .work{
+  opacity: 0;
   p{
     margin-bottom: 10px;
     font-size: 20px;
@@ -307,6 +308,7 @@ footer{
 .cursor {
   pointer-events: none;
   opacity: 0.5;
+  z-index: 100;
 
   &__ball {
     position: fixed;

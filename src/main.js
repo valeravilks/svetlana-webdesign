@@ -66,6 +66,7 @@ window.onload = function(){
 
         timeline
             .addLabel('s')
+            .set('.work', {opacity: 1})
             .fromTo('.title',
                 {x: 100, opacity: 0},
                 {x: 0, opacity: 1}, 's+=0.6')
@@ -215,4 +216,50 @@ function onMouseHoverOut() {
         scale: 1
     })
 }
+
+$('[data-to-work]').click( function(){
+    let elem = document.createElement('div');
+    elem.classList.add('nextLoader');
+    elem.style.position = 'fixed';
+    elem.style.left = '0';
+    elem.style.top = '0';
+    elem.style.bottom = '0';
+    elem.style.zIndex = '1';
+    elem.style.width = '0';
+    elem.style.backgroundColor = 'red';
+
+    document.body.appendChild(elem);
+
+    let timelineToWork = gsap.timeline({
+        onComplete: () => {
+            window.location.href = window.location.href + $(this).attr('data-to-work');
+        }
+    });
+
+    timelineToWork.fromTo('body', {opacity: 1}, {opacity: 0, duration: 0.3});
+});
+
+$('a').click( function(e){
+    e.preventDefault();
+    let elem = document.createElement('div');
+    elem.classList.add('nextLoader');
+    elem.style.position = 'fixed';
+    elem.style.left = '0';
+    elem.style.top = '0';
+    elem.style.bottom = '0';
+    elem.style.zIndex = '1';
+    elem.style.width = '0';
+    elem.style.backgroundColor = 'red';
+
+    document.body.appendChild(elem);
+
+    let timelineToWork = gsap.timeline({
+        onComplete: () => {
+            window.location.href = $(this).attr('href');
+        }
+    });
+
+    timelineToWork.fromTo('body', {opacity: 1}, {opacity: 0, duration: 0.3});
+});
+
 

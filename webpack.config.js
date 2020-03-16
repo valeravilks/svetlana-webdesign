@@ -29,7 +29,7 @@ let conf = {
             template: 'src/html/ru/work/art-guide-ru.pug'
         }),
         new HtmlWebpackPlugin({
-            filename: "ru/chloe/index.html",
+            filename: "ru/chloe.html",
             template: 'src/html/ru/work/chloe-ru.pug'
         }),
         new HtmlWebpackPlugin({
@@ -49,7 +49,7 @@ let conf = {
             template: 'src/html/en/work/art-guide-ru.pug'
         }),
         new HtmlWebpackPlugin({
-            filename: "en/chloe/index.html",
+            filename: "en/chloe.html",
             template: 'src/html/en/work/chloe-ru.pug'
         }),
         new HtmlWebpackPlugin({
