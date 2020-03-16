@@ -16,6 +16,30 @@ export default class{
             $(option.entry).css('opacity', 1);
             this.next();
         });
+
+        $('[data-to-work]').click( function(){
+
+
+            let elem = document.createElement('div');
+            elem.classList.add('nextLoader');
+            elem.style.position = 'fixed';
+            elem.style.left = '0';
+            elem.style.top = '0';
+            elem.style.bottom = '0';
+            elem.style.zIndex = '1000';
+            elem.style.width = '0';
+            elem.style.backgroundColor = 'red';
+
+            document.body.appendChild(elem);
+
+            let timelineToWork = gsap.timeline({
+                onComplete: () => {
+                    window.location.href = window.location.href + $(this).attr('data-to-work');
+                }
+            });
+
+            timelineToWork.fromTo('body', {opacity: 1}, {opacity: 0, duration: 1});
+        })
     }
     next(){
         // this.slide.hasClass('load') ? this.slide.removeClass('load') : '';
@@ -42,6 +66,8 @@ export default class{
 
             nextTimeline
                 .addLabel('Start')
+                .set(currentSlideDom, {zIndex: 0})
+                .set(nextSlideDom, {zIndex: 1})
                 .fromTo(currentSlideDom.find('.title'), {x: 0}, {
                     x: 50,
                     opacity: 0,
