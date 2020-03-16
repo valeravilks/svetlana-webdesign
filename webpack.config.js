@@ -35,6 +35,26 @@ let conf = {
         new HtmlWebpackPlugin({
             filename: "ru/info.html",
             template: 'src/html/ru/info.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: "en/index.html",
+            template: 'src/html/en/index.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: "en/boston.html",
+            template: 'src/html/en/work/boston-ru.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: "en/art-guide.html",
+            template: 'src/html/en/work/art-guide-ru.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: "en/chloe/index.html",
+            template: 'src/html/en/work/chloe-ru.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: "en/info.html",
+            template: 'src/html/en/info.pug'
         })
     ],
     module: {

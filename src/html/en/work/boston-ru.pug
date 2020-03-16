@@ -5,7 +5,13 @@ html
     title Webpack App
     body.work
         .wrapper
-            include ./../../includes/header
+            header.header
+                nav
+                    ul
+                        li
+                            a.link(href='/ru') Проекты
+                            a.link(href='/ru/info.html') Инфо
+                a.lang(href='/en') EN
             section.first
                 .title(data-aos="fade-in") BOSTON
                 .block

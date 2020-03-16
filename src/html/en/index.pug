@@ -6,7 +6,13 @@ html
     title Webpack App
     body.home
         div(class='wrapper')
-            include ./../includes/header.pug
+            header.header
+                nav
+                    ul
+                        li
+                            a.link(href='/ru') Проекты
+                            a.link(href='/ru/info.html') Инфо
+                a.lang(href='/en') EN
             .slider
                 .slider-list
                     .slide
