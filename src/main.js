@@ -183,7 +183,7 @@ document.body.appendChild(nodeCursor);
 
 const $bigBall = document.querySelector('.cursor__ball--big');
 const $smallBall = document.querySelector('.cursor__ball--small');
-const $hoverables = document.querySelectorAll('.hoverable');
+const $hoverables = document.querySelectorAll('a');
 
 // Listeners
 document.body.addEventListener('mousemove', onMouseMove);
