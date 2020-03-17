@@ -239,6 +239,30 @@ $('[data-to-work]').click( function(){
     timelineToWork.fromTo('body', {opacity: 1}, {opacity: 0, duration: 0.3});
 });
 
+$('[data-to-work2]').click( function(){
+    let elem = document.createElement('div');
+    elem.classList.add('nextLoader');
+    elem.style.position = 'fixed';
+    elem.style.left = '0';
+    elem.style.top = '0';
+    elem.style.bottom = '0';
+    elem.style.zIndex = '1';
+    elem.style.width = '0';
+    elem.style.backgroundColor = 'red';
+
+    document.body.appendChild(elem);
+
+    let timelineToWork = gsap.timeline({
+        onComplete: () => {
+            let loc = window.location.origin;
+            console.log(loc + $(this).attr('data-to-work'));
+            window.location.href = window.location.origin + $(this).attr('data-to-work2');
+        }
+    });
+
+    timelineToWork.fromTo('body', {opacity: 1}, {opacity: 0, duration: 0.3});
+});
+
 $('a').click( function(e){
     e.preventDefault();
     let elem = document.createElement('div');
