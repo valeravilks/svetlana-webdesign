@@ -43,9 +43,11 @@
     "aos": "^2.3.4",
     "gl-transitions": "^1.43.0",
     "jquery": "^3.4.1",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
     "pixi.js": "^5.2.1",
     "scrollmagic": "^2.0.7",
     "scrollmagic-plugin-gsap": "^1.0.4",
+    "smooth-scroll": "^16.1.2",
     "wowjs": "^1.1.3"
   }
 }

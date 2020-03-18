@@ -2,6 +2,7 @@ import './scss/style.scss';
 import $ from 'jquery';
 import 'jquery-mousewheel';
 import Slider from './js/main-slider';
+import ProgressScroll from './js/progress-scroll';
 
 import * as ScrollMagic from "scrollmagic"; // Or use scrollmagic-with-ssr to avoid server rendering problems
 import gsap from "gsap";  // Also works with TweenLite and TimelineLite: import { TweenMax, TimelineMax } from "gsap";
@@ -293,4 +294,13 @@ $('.link').click( function(e){
     timelineToWork.fromTo('body', {opacity: 1}, {opacity: 0, duration: 0.3});
 });
 
+let pScroll = new ProgressScroll();
 
+$(document).bind( 'mousewheel', function (e) {
+    var nt = $(document.body).scrollTop()-(e.deltaY*e.deltaFactor*100);
+    e.preventDefault();
+    e.stopPropagation();
+    $(document.body).stop().animate( {
+        scrollTop : nt
+    } , 500 , 'easeInOutCubic' );
+} )
