@@ -270,7 +270,7 @@ $('[data-to-work2]').click( function(){
     timelineToWork.fromTo('body', {opacity: 1}, {opacity: 0, duration: 0.3});
 });
 
-$('a').click( function(e){
+$('.link').click( function(e){
     e.preventDefault();
     let elem = document.createElement('div');
     elem.classList.add('nextLoader');
