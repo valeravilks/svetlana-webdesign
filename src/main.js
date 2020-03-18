@@ -187,6 +187,13 @@ const $smallBall = document.querySelector('.cursor__ball--small');
 const $hoverables = document.querySelectorAll('a');
 
 // Listeners
+const $hoverables2 = document.querySelectorAll('[data-cursor-hover]');
+document.body.addEventListener('mousemove', onMouseMove);
+for (let i = 0; i < $hoverables2.length; i++) {
+    $hoverables2[i].addEventListener('mouseenter', onMouseHover);
+    $hoverables2[i].addEventListener('mouseleave', onMouseHoverOut);
+}
+
 document.body.addEventListener('mousemove', onMouseMove);
 for (let i = 0; i < $hoverables.length; i++) {
     $hoverables[i].addEventListener('mouseenter', onMouseHover);
