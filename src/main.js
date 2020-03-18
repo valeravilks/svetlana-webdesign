@@ -10,7 +10,7 @@ import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 
 ScrollMagicPluginGsap(ScrollMagic, gsap);
 
-import SplitText from './js/splitText';
+// import SplitText from './js/splitText';
 
 var controller = new ScrollMagic.Controller();
 
@@ -107,7 +107,7 @@ let slider = new Slider({
 if($('body').hasClass('info')){
 
     let infoPageTimeline = gsap.timeline();
-    let infoSplitText = new SplitText('.info .head', {type: 'lines'});
+    // let infoSplitText = new SplitText('.info .head', {type: 'lines'});
 
     window.onload = function(){
 
@@ -121,7 +121,7 @@ if($('body').hasClass('info')){
             'only'
             )
             .from(
-                infoSplitText.lines,
+                '.info .head',
                 1,
                 { y: '+=100', opacity: 0, stagger: 0.3, rotation: 5, ease: 'Power3.easeOut' },
                 'only'

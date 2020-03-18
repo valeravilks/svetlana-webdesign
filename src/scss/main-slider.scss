@@ -2,10 +2,18 @@
   position: relative;
   padding-top: 100px;
   opacity: 0;
+  @media (max-width: 1000px) {
+    padding-top: 65px;
+  }
 
   .slide{
     display: flex;
+    flex-wrap: wrap;
     position: absolute;
+
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
 
     &.load{
       transform: scale(1);
@@ -26,6 +34,7 @@
         .title {
           transform: translateX(0px);
           opacity: 1;
+
         }
 
         .num{
@@ -96,10 +105,23 @@
       align-items: flex-end;
       justify-content: space-between;
 
+      @media (max-width: 1230px) {
+        width: 410px;
+      }
+
+      @media (max-width: 1000px) {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
       .num{
         align-self: flex-start;
         margin-bottom: 70px;
         opacity: 0;
+        @media (max-width: 1000px) {
+          margin-bottom: 25px;
+          padding-top: 0;
+        }
     }
       .title{
         font-size: 80px;
@@ -107,6 +129,15 @@
         letter-spacing: 0.1em;
         margin-bottom: 20px;
         opacity: 0;
+
+        @media (max-width: 1000px) {
+          text-align: center;
+          margin-bottom: 10px;
+        }
+
+        @media (max-width: 640px) {
+          font-size: 55px;
+        }
       }
       hr{
         margin-bottom: 20px;
@@ -137,6 +168,10 @@
       .bl{
         display: flex;
         flex-direction: column;
+
+        @media (max-width: 1000px) {
+          width: 100%
+        }
     }
   }
 
@@ -145,16 +180,35 @@
       padding-left: 50px;
       opacity: 0;
 
+      @media (max-width: 1000px) {
+        width: 100%;
+        padding-left: 0;
+        padding-bottom: 30px;
+      }
+
       .img-block{
         width: 500px;
         height: 350px;
         position: relative;
+
+        @media (max-width: 1000px) {
+          width: 100%;
+        }
+
+        @media (max-width: 640px) {
+          height: 210px;
+        }
         .cover{
           position: absolute;
           top: 0;
           bottom: 0;
           left: 0;
           right: 0;
+
+          @media (max-width: 1000px) {
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
         }
         .img-cover{
           position: absolute;
