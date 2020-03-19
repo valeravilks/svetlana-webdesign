@@ -354,14 +354,8 @@ a{
         transition: height .3s ease;
       }
     }
-
-    .cont{
-      display: flex;
-      flex-wrap: wrap;
+    .f-dop{
       padding: 100px 150px;
-      align-items: center;
-      justify-content: space-between;
-
       @media (max-width: 1230px) {
         padding: 100px 0;
       };
@@ -369,6 +363,16 @@ a{
       @media (max-width: 1000px) {
         padding: 55px 0 100px;
       }
+    }
+
+    .cont{
+      display: flex;
+      flex-wrap: wrap;
+
+      align-items: center;
+      justify-content: space-between;
+
+
     }
     .block-1{
       @media (max-width: 1000px) {
@@ -507,7 +511,7 @@ footer{
 }
 .cursor {
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: 100;
 
   &__ball {
@@ -524,7 +528,9 @@ footer{
 
     circle {
       //fill: #593260;
-      fill: #8e5199;
+      //fill: #8e5199;
+      //fill: #6f93b5;
+      fill: #f39c19;
     }
   }
 }
