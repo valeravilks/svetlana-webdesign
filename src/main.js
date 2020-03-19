@@ -3,6 +3,7 @@ import $ from 'jquery';
 import 'jquery-mousewheel';
 import Slider from './js/main-slider';
 import ProgressScroll from './js/progress-scroll';
+import Hammer from 'hammerjs';
 
 import * as ScrollMagic from "scrollmagic"; // Or use scrollmagic-with-ssr to avoid server rendering problems
 import gsap from "gsap";  // Also works with TweenLite and TimelineLite: import { TweenMax, TimelineMax } from "gsap";
@@ -296,3 +297,15 @@ $('.link').click( function(e){
 
 let pScroll = new ProgressScroll();
 
+var mc = new Hammer(document.body);
+
+// listen to events...
+mc.on("panleft panright tap press", (ev) => {
+    if(ev.type == 'panleft'){
+        slider.next();
+    }
+    if(ev.type == 'panright'){
+        slider.prev();
+    }
+    // document.body.textContent = ev.type +" gesture detected.";
+});
