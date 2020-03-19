@@ -309,3 +309,10 @@ mc.on("panleft panright tap press", (ev) => {
     }
     // document.body.textContent = ev.type +" gesture detected.";
 });
+//
+// window.onload = function() {
+//     if (window.innerWidth < 400) {
+//         var mvp = document.getElementById('vp');
+//         mvp.setAttribute('content','user-scalable=no,width=450');
+//     }
+// }
