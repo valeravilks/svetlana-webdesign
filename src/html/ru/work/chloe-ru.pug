@@ -2,6 +2,7 @@ doctype html
 html
     head
     meta(charser = 'utf-8')
+    meta(id="vp" name="viewport" content="width=device-width, initial-scale=1.0")
     title Webpack App
     body.work
         .wrapper
@@ -22,25 +23,26 @@ html
                 .content
                     p Chloe — французский дом моды, специализирующийся на выпуске одежды, обуви, аксессуаров и парфюмерии.
                     p Цель этого проекта — обновить внешний вид и структуру существующего интернет магазина.
-        img.img-1.js-img-animate(src=require('./../../../img/chloe/chloe-8.jpg'))
+        .img-1.js-img-animate(style='background-image: url(' + require('./../../../img/chloe/chloe-8.jpg') + ')')
+
         .wrapper
             .content-2
                 p.js-text-animate Дизайн выполнен таким образом, чтобы сосредоточить внимание пользователя на контенте и создать ощущение элегантности.
-            .content-3.mb100.js-img-animate(data-aos="fade-up")
+            .content-3.mb100-2.js-img-animate(data-aos="fade-up")
                 img.img-2(src=require('./../../../img/chloe/chloe-1.jpg'))
-            .content-3.mb100.js-img-animate(data-aos="fade-up")
+            .content-3.mb100-2.js-img-animate(data-aos="fade-up")
                 img.img-2(src=require('./../../../img/chloe/chloe-3.jpg'))
-            .content-3.mb100.js-img-animate(data-aos="fade-up")
+            .content-3.mb100-2.js-img-animate(data-aos="fade-up")
                 img.img-2(src=require('./../../../img/chloe/chloe-6.jpg'))
-            .content-3.mb100.js-img-animate(data-aos="fade-up")
+            .content-3.mb100-2.js-img-animate(data-aos="fade-up")
                 img.img-2(src=require('./../../../img/chloe/chloe-4.jpg'))
-            .content-3.mb100.js-img-animate(data-aos="fade-up")
+            .content-3.mb100-2.js-img-animate(data-aos="fade-up")
                 img.img-2(src=require('./../../../img/chloe/chloe-5.jpg'))
-            .content-3.js-img-animate(data-aos="fade-up")
+            .content-3.js-mb100-2-animate(data-aos="fade-up")
                 img.img-2(src=require('./../../../img/chloe/chloe-2.jpg'))
             .content-2
                 p.js-text-animate Также была проектирована адаптивная версия сайта, посредством которой сайт корректно отображается на все устройствах.
-            .content-7
+            .content-7.pre-footer
                 .block-1.js-mob-animate
                     img(src=require('./../../../img/chloe/Tablet-3-min.png'))
                     img(src=require('./../../../img/chloe/Tablet-2-min.png'))
