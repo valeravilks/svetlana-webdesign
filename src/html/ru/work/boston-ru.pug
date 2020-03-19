@@ -22,7 +22,7 @@ html
                 .content
                     p Клубный дом Boston - это аппартаменты с уникальной архитектурой и интерьерами, в которых видимая роскошь сочетается с комфортом.
                     p В ходе выполнения проекта был проведен конкурентный анализ, построена удобная структура и отрисована визуальная концепция в стиле минимализма.
-        img.img-1.js-img-animate(src=require('./../../../img/boston/boston-1.jpg'))
+        .img-1.js-img-animate(style='background-image: url(' + require('./../../../img/boston/boston-1.jpg') + ')')
         .wrapper
             .content-2
                 p.js-text-animate Страница сайта позволяет пользователю ознакомится с расположением и характеристиками, оценить преимущества и предложения клубного дома, а в завершении оставить заявку, заполнив форму обратной связи.
@@ -30,7 +30,7 @@ html
                 img.img-2.js-img-animate(src=require('./../../../img/boston/boston-2.jpg'))
             .content-2
                 p.js-text-animate Также была проектирована адаптивная версия сайта, посредством которой сайт корректно отображается на все устройствах.
-            .content-4.pb-200
+            .content-4
                 .bl.bl-1.js-mob-animate
                     img.img-2(src=require('./../../../img/boston/1.png'))
                     img.img-2(src=require('./../../../img/boston/2.png'))

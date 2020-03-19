@@ -12,8 +12,9 @@ body{
   color: #282828;
   background-color: #F9F9F9;
   cursor: none;
-  //min-height: 100vh;
+  min-height: 100vh;
   overflow-x: hidden;
+  min-width: 300px;
 }
 a{
   cursor: none;
@@ -141,7 +142,7 @@ a{
     height: 788px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top center;
 
     @media (max-width: 1230px) {
       height: 492px;
