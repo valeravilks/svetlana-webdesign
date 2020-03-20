@@ -15,7 +15,7 @@ export default class{
         document.body.appendChild(this.elem);
 
         this.progress = document.createElement('div');
-        this.progress.style.backgroundColor = '#8e5199';
+        this.progress.style.backgroundColor = '#f2c94c';
         this.progress.style.width = '0%';
         this.progress.style.height = '3px';
         this.progress.style.transition = 'width .5s ease';
