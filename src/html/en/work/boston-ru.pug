@@ -1,8 +1,10 @@
 doctype html
-html
+html(lang="en")
     head
     meta(charser = 'utf-8')
-    title Webpack App
+    link(rel="icon" type="image/png" sizes="16x16" href=require('img/main-page/favicon-16x16.png'))
+    meta(id="vp" name="viewport" content="width=device-width, initial-scale=1.0")
+    title Project - Boston
     body.work
         .wrapper
             header.header
@@ -22,7 +24,7 @@ html
                 .content
                     p Club House Boston is an apartment with unique architecture and interiors, in which visible luxury is combined with comfort.
                     p In the process of creating the project, a competitive analysis was carried out, a convenient structure was built and a visual concept was drawn in the style of minimalism.
-        img.img-1.js-img-animate(src=require('./../../../img/boston/boston-1.jpg'))
+        .img-1.js-img-animate(style='background-image: url(' + require('./../../../img/boston/Boston-1600-min.jpg') + ')')
         .wrapper
             .content-2
                 p.js-text-animate The site page allows the user to familiarize themselves with the location and characteristics, evaluate the benefits and offers of the club house, and in the end leave a request by filling out the feedback form.
@@ -30,7 +32,7 @@ html
                 img.img-2.js-img-animate(src=require('./../../../img/boston/boston-2.jpg'))
             .content-2
                 p.js-text-animate An adaptive version was also designed, through which the site is correctly displayed on all devices.
-            .content-4.pb-200
+            .content-4
                 .bl.bl-1.js-mob-animate
                     img.img-2(src=require('./../../../img/boston/1.png'))
                     img.img-2(src=require('./../../../img/boston/2.png'))
@@ -40,14 +42,15 @@ html
                     img.img-2(src=require('./../../../img/boston/5.png'))
                     img.img-2(src=require('./../../../img/boston/6.png'))
         .work-footer
-            .wrapper
-                .cont
-                    .block-1
-                        .text-1 Next project
-                        .text-2(data-text="ARTGUIDE" data-to-work2="/en/art-guide.html") ARTGUIDE
-                    .block-2(data-to-work2="/en/art-guide.html")
-                        img(src=require('./../../../img/main-page/01-min.jpg'))
-                        .img-help
+            .wrapper.w-foot
+                .f-dop
+                    .cont(data-cursor-hover)
+                        .block-1
+                            .text-1 Next project
+                            .text-2(data-text="ARTGUIDE" data-to-work2="/en/art-guide.html") ARTGUIDE
+                        .block-2(data-to-work2="/en/art-guide.html")
+                            img(src=require('./../../../img/main-page/01-min.jpg'))
+                            .img-help
         footer.black
             .wrapper
-                .text &#169 2020 Svetlana Tsymbalyuk
+                .text-2 &#169 2020 Svetlana Tsymbalyuk

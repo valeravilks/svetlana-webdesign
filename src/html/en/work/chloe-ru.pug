@@ -1,8 +1,10 @@
 doctype html
-html
+html(lang='ru')
     head
     meta(charser = 'utf-8')
-    title Webpack App
+    link(rel="icon" type="image/png" sizes="16x16" href=require('img/main-page/favicon-16x16.png'))
+    meta(id="vp" name="viewport" content="width=device-width, initial-scale=1.0")
+    title Project - Chloe
     body.work
         .wrapper
             header.header
@@ -11,7 +13,7 @@ html
                         li
                             a.link(href='/en') Projects
                             a.link(href='/en/info.html') Info
-                a.lang(href='/ru/chloe.html') RU
+                a.lang(href='/ru/chloe.html') EN
             section.first
                 .title(data-aos="fade-in") CHLOE
                 .block
@@ -22,25 +24,27 @@ html
                 .content
                     p Chloe is a French fashion house specializing in clothes, shoes, accessories and perfumes.
                     p The goal of this project is to update the look and structure of an existing online store.
-        img.img-1.js-img-animate(src=require('./../../../img/chloe/chloe-8.jpg'))
+        .img-1.js-img-animate.img-cus-1(style='background-image: url(' + require('./../../../img/chloe/Chloe-1600-min.jpg') + ')')
         .wrapper
             .content-2
                 p.js-text-animate The design was created in such a way as to focus the user's attention on the content and create a sense of elegance.
-            .content-3.mb100.js-img-animate(data-aos="fade-up")
+            .content-3.mb100-2.js-img-animate(data-aos="fade-up")
                 img.img-2(src=require('./../../../img/chloe/chloe-1.jpg'))
-            .content-3.mb100.js-img-animate(data-aos="fade-up")
+            .content-3.mb100-2.js-img-animate(data-aos="fade-up")
                 img.img-2(src=require('./../../../img/chloe/chloe-3.jpg'))
-            .content-3.mb100.js-img-animate(data-aos="fade-up")
+            .content-3.mb100-2.js-img-animate(data-aos="fade-up")
                 img.img-2(src=require('./../../../img/chloe/chloe-6.jpg'))
-            .content-3.mb100.js-img-animate(data-aos="fade-up")
+            .content-3.mb100-2.js-img-animate(data-aos="fade-up")
                 img.img-2(src=require('./../../../img/chloe/chloe-4.jpg'))
-            .content-3.mb100.js-img-animate(data-aos="fade-up")
+            .content-3.mb100-2.js-img-animate(data-aos="fade-up")
                 img.img-2(src=require('./../../../img/chloe/chloe-5.jpg'))
-            .content-3.js-img-animate(data-aos="fade-up")
+            .content-3.mb100-2.js-img-animate(data-aos="fade-up")
                 img.img-2(src=require('./../../../img/chloe/chloe-2.jpg'))
+            .content-3.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/chloe/chloe-222.jpg'))
             .content-2
                 p.js-text-animate An adaptive version was also designed, through which the site is correctly displayed on all devices.
-            .content-7
+            .content-7.pre-footer
                 .block-1.js-mob-animate
                     img(src=require('./../../../img/chloe/Tablet-3-min.png'))
                     img(src=require('./../../../img/chloe/Tablet-2-min.png'))
@@ -49,14 +53,15 @@ html
                     img.mb50(src=require('./../../../img/chloe/641-min.png'))
                     img(src=require('./../../../img/chloe/1-min.png'))
         .work-footer
-            .wrapper
-                .cont
-                    .block-1
-                        .text-1 Next project
-                        .text-2(data-text="BOSTON" data-to-work2="/en/boston.html") BOSTON
-                    .block-2(data-to-work2="/en/boston.html")
-                        img(src=require('./../../../img/main-page/03-min.jpg'))
-                        .img-help
+            .wrapper.w-foot
+                .f-dop
+                    .cont(data-cursor-hover)
+                        .block-1
+                            .text-1 Next project
+                            .text-2(data-text="BOSTON" data-to-work2="/en/boston.html") BOSTON
+                        .block-2(data-to-work2="/en/boston.html")
+                            img(src=require('./../../../img/main-page/03-min.jpg'))
+                            .img-help
         footer.black
             .wrapper
-                .text &#169 2020 Svetlana Tsymbalyuk
+                .text-2 &#169 2020 Svetlana Tsymbalyuk

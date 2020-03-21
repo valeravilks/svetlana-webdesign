@@ -1,7 +1,9 @@
 doctype html
-html
+html(lang="en")
     head
         meta(charser = 'utf-8')
+        link(rel="icon" type="image/png" sizes="16x16" href=require('img/main-page/favicon-16x16.png'))
+        meta(id="vp" name="viewport" content="width=device-width, initial-scale=1.0")
         title Info
     body.info
         .wrapper.o-0
@@ -10,14 +12,14 @@ html
                     ul
                         li
                             a.link(href='/en') Projects
-                            a.link(href='/en/info.html') Info
+                            a.link.active(href='/en/info.html') Info
                 a.lang(href='/ru/info.html') RU
             .info-block
                 .content
                     .block-1
                     .block-2
                         p.head Hello!
-                        p.head I am Svetlana, a web designer from Russia. I design sites in the style of minimalism.
+                        p.head I am Svetlana, a UI/UX designer from Russia. I design sites in the style of minimalism.
                 .content.js-info-animate.o-0
                     .block-1.an-1 In a few words
                     .block-2.an-2
@@ -26,7 +28,7 @@ html
                 .content.js-info-animate.o-0
                     .block-1 Skills
                     .block-2
-                        p UI design
+                        p UI/UX
                         p Competitive analysis
                         p Prototyping
                         p Visual concept
@@ -47,4 +49,4 @@ html
                         a.link-1(href='https://www.instagram.com/svetlana_webdesign' target='_blank') Instagram
         footer.white
             .wrapper
-                .text &#169 2020 Svetlana Tsymbalyuk
+                .text-2 &#169 2020 Svetlana Tsymbalyuk

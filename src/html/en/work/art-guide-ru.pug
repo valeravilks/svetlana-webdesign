@@ -1,28 +1,31 @@
 doctype html
-html
+html(lang='en')
     head
     meta(charser = 'utf-8')
-    title Webpack App
+    link(rel="icon" type="image/png" sizes="16x16" href=require('img/main-page/favicon-16x16.png'))
+    meta(id="vp" name="viewport" content="width=device-width, initial-scale=1.0")
+    title Project - AtrGuide
     body.work
-        .wrapper
-            header.header
-                nav
-                    ul
-                        li
-                            a.link(href='/en') Projects
-                            a.link(href='/en/info.html') Info
-                a.lang(href='/ru/art-guide.html') RU
-            section.first
-                .title(data-aos="fade-in") ARTGUIDE
-                .block
-                    .text News site redesign
-                    .text Design
-                    .text January 2020
-                a.link-b.js-link(href="https://www.behance.net/gallery/93129881/ARTGUIDE-News-website-Redesign-Concept" target='_blank') Behance
-                .content
-                    p Artguide - an online resource dedicated to the cultural life of Moscow and St. Petersburg.
-                    p The main task: to change the appearance and navigation of an existing site, to make user interaction with content more simple and intuitive.
-        img.img-1.js-img-animate(src=require('./../../../img/artguide/artguide-min.jpg'))
+        .work-content
+            .wrapper
+                header.header
+                    nav
+                        ul
+                            li
+                                a.link(href='/en') Projects
+                                a.link(href='/en/info.html') Info
+                    a.lang(href='/ru/art-guide.html') RU
+                section.first
+                    .title(data-aos="fade-in") ARTGUIDE
+                    .block
+                        .text News site redesign
+                        .text Design
+                        .text January 2020
+                    a.link-b.js-link(href="https://www.behance.net/gallery/93129881/ARTGUIDE-News-website-Redesign-Concept" target='_blank') Behance
+                    .content
+                        p Artguide - an online resource dedicated to the cultural life of Moscow and St. Petersburg.
+                        p The main task: to change the appearance and navigation of an existing site, to make user interaction with content more simple and intuitive.
+        .img-1.js-img-animate(style='background-image: url(' + require('./../../../img/artguide/art-1600-min.jpg') + ')')
         .wrapper
             .content-2
                 p.js-text-animate Laconic page layout in the style of minimalism emphasizes the semantic richness of the site and facilitates the perception of information.
@@ -36,8 +39,8 @@ html
                     img.img-2(src=require('./../../../img/artguide/2-min.png'))
                     img.img-2(src=require('./../../../img/artguide/3-min.png'))
             .content-3.js-img-animate(data-aos="fade-up")
-                img.img-2.mb100(src=require('./../../../img/artguide/artguide-3.jpg'))
-            .content-4
+                img.img-2(src=require('./../../../img/artguide/artguide-3.jpg'))
+            .content-4.mt-100-2
                 .bl.bl-1.js-mob-animate
                     img.img-2(src=require('./../../../img/artguide/4-min.png'))
                     img.img-2(src=require('./../../../img/artguide/5-min.png'))
@@ -47,21 +50,22 @@ html
                     img.img-2(src=require('./../../../img/artguide/8-min.png'))
                     img.img-2(src=require('./../../../img/artguide/9-min.png'))
             .content-6
-                .block-1
+                .block-1.js-img-animate
                     img(src=require('./../../../img/artguide/arguide-1.jpg'))
-                .block-2
+                .block-2.js-mob-animate
                     img(src=require('./../../../img/artguide/650-min.png'))
-            .content-3.js-img-animate(data-aos="fade-up")
-                img.img-2.mb100(src=require('./../../../img/artguide/artguide-2.jpg'))
+            .content-3.js-img-animate.pre-footer(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/artguide/artguide-2.jpg'))
         .work-footer
-            .wrapper
-                .cont
-                    .block-1
-                        .text-1 Next project
-                        .text-2(data-text="CHLOE" data-to-work2="/en/chloe.html") CHLOE
-                    .block-2(data-to-work2="/en/chloe.html")
-                        img(src=require('./../../../img/main-page/03-min.jpg'))
-                        .img-help
+            .wrapper.w-foot
+                .f-dop
+                    .cont(data-cursor-hover)
+                        .block-1
+                            .text-1 Next project
+                            .text-2(data-text="CHLOE" data-to-work2="/en/chloe.html") CHLOE
+                        .block-2(data-to-work2="/en/chloe.html")
+                            img(src=require('./../../../img/main-page/02-min.jpg'))
+                            .img-help
         footer.black
             .wrapper
-                .text &#169 2020 Svetlana Tsymbalyuk
+                .text-2 &#169 2020 Svetlana Tsymbalyuk
