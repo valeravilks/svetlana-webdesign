@@ -456,11 +456,11 @@ footer{
 .info{
   .content{
     display: flex;
-    flex-wrap: wrap;
     margin-bottom: 100px;
 
     @media (max-width: 1000px){
       margin-bottom: 70px;
+      flex-wrap: wrap;
     }
     .block-1{
       width: 300px;
