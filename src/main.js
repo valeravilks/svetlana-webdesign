@@ -332,6 +332,7 @@ let app = new PIXI.Application({
     width: element.offsetWidth,
     height: element.offsetHeight
 });
+
 app.stage.interactive = true;
 let imgg = element.getAttribute('data-src');
 console.log(imgg);
@@ -343,6 +344,11 @@ app.stage.addChild(container);
 
 const displacementSprite = PIXI.Sprite.from(imgg);
 container.addChild(displacementSprite);
+
+window.addEventListener('resize', ()=>{
+    app.view.width = element.offsetWidth;
+    app.view.height = element.offsetHeight;
+})
 
 app.loader.add(iim).load(()=>{
     // const displacementSprite = PIXI.Sprite.from(iim);

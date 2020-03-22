@@ -213,6 +213,12 @@
             background-repeat: no-repeat;
             background-size: cover;
           }
+
+          canvas{
+            @media (max-width: 1000px) {
+              display: none;
+            }
+          }
         }
         .img-cover{
           position: absolute;
