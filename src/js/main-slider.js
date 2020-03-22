@@ -2,6 +2,7 @@ import $ from 'jquery';
 import 'jquery-mousewheel';
 import gsap from 'gsap';
 import * as PIXI from 'pixi.js';
+import {ShockwaveFilter} from "@pixi/filter-shockwave";
 
 export default class{
     constructor(option) {
@@ -13,8 +14,10 @@ export default class{
         this.animation = false;
         this.start = false;
         this.slide.css('z-index', '-1');
+        this.loadImageEffect();
 
         $(option.entry).ready(() => {
+
             $(option.entry).css('opacity', 1);
             this.next();
         });
@@ -237,5 +240,40 @@ export default class{
 
         }
 
+    };
+    loadImageEffect(){
+
+        $(this.option.entry).find('.cover').each((i, el)=>{
+            // let element = document.getElementById('image');
+            console.log(el);
+            let app = new PIXI.Application({
+                width: el.offsetWidth,
+                height: el.offsetHeight
+            });
+
+            app.stage.interactive = true;
+            let imgg = $(el).attr('data-src');
+            el.appendChild(app.view);
+
+            let container = new PIXI.Container();
+            app.stage.addChild(container);
+
+            const displacementSprite = PIXI.Sprite.from(imgg);
+            container.addChild(displacementSprite);
+
+            window.addEventListener('resize', ()=>{
+                app.view.width = el.offsetWidth;
+                app.view.height = el.offsetHeight;
+            })
+
+            let f = new ShockwaveFilter([-50, -50]);
+            container.filters = [f];
+
+            app.stage.on('mouseover', (event) => {
+                f.center = [event.data.global.x, event.data.global.y];
+                gsap
+                    .fromTo(f, 5, {time: 0}, {time: 3});
+            })
+        })
     }
 }
