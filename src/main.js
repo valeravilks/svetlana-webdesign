@@ -241,7 +241,14 @@ $('[data-to-work]').click( function(){
 
     let timelineToWork = gsap.timeline({
         onComplete: () => {
-            window.location.href = window.location.href + $(this).attr('data-to-work');
+            let href = window.location.href.split('/');
+            if(href[href.length - 1]){
+                window.location.href = window.location.href + '/' + $(this).attr('data-to-work');
+            } else {
+                window.location.href = window.location.href + $(this).attr('data-to-work');
+            }
+
+            // window.location.href = window.location.href + $(this).attr('data-to-work');
         }
     });
 

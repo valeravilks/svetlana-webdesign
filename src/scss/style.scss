@@ -334,13 +334,14 @@ a{
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: white;
       font-weight: 500;
-      font-size: 75px;
+      font-size: 80px;
       line-height: 95px;
       letter-spacing: 0.1em;
       position: relative;
 
       @media (max-width: 1230px) {
         max-width: 960px;
+        font-size: 75px;
       }
 
       @media (max-width: 1000px) {
@@ -365,7 +366,7 @@ a{
       }
     }
     .f-dop{
-      padding: 100px 150px;
+      padding: 100px 0;
       display: flex;
       width: 100%;
       @media (max-width: 1230px) {
@@ -379,17 +380,23 @@ a{
 
     .cont{
       display: flex;
-      flex-wrap: wrap;
       width: 100%;
 
       align-items: center;
-      justify-content: space-between;
-
+      justify-content: center;
+      @media (max-width: 1000px) {
+        max-width: 600px;
+        flex-wrap: wrap;
+      }
 
     }
     .block-1{
+      margin-right: 50px;
       @media (max-width: 1000px) {
        width: 100%;
+      }
+      @media (max-width: 640px) {
+        margin-right: 0;
       }
     }
     .block-2{
