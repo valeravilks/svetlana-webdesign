@@ -4,7 +4,7 @@ import 'jquery-mousewheel';
 import Slider from './js/main-slider';
 import ProgressScroll from './js/progress-scroll';
 import Hammer from 'hammerjs';
-
+import {ShockwaveFilter} from '@pixi/filter-shockwave';
 import * as ScrollMagic from "scrollmagic"; // Or use scrollmagic-with-ssr to avoid server rendering problems
 import gsap from "gsap";  // Also works with TweenLite and TimelineLite: import { TweenMax, TimelineMax } from "gsap";
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
@@ -336,7 +336,7 @@ app.stage.interactive = true;
 let imgg = element.getAttribute('data-src');
 console.log(imgg);
 element.appendChild(app.view);
-let iim = require('img/main-page/displ.png');
+let iim = require('img/main-page/displ2.png');
 
 let container = new PIXI.Container();
 app.stage.addChild(container);
@@ -345,31 +345,34 @@ const displacementSprite = PIXI.Sprite.from(imgg);
 container.addChild(displacementSprite);
 
 app.loader.add(iim).load(()=>{
-    const displacementSprite2 = PIXI.Sprite.from(iim);
-    displacementSprite2.width = element.offsetWidth * 2;
-    displacementSprite2.height = element.offsetHeight * 2;
-    const displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite2);
-    displacementFilter.scale.x = 1;
-    displacementFilter.scale.y = 1;
-    app.stage.addChild(displacementSprite2);
+    // const displacementSprite = PIXI.Sprite.from(iim);
+    // container.addChild(displacementSprite);
+    //
+    let f = new ShockwaveFilter([-50, -50]);
 
-    container.filters = [displacementFilter];
+
+    container.filters = [f];
 
     app.stage
         .on('mouseover', onMouseOver)
         .on('mouseout', onMuseOut);
 
     function onMouseOver(event){
-        console.log(displacementSprite2);
-        let t1 = gsap.timeline();
-        t1.addLabel('st')
-          .to(displacementFilter.scale, 0.2, {x: 50}, "st")
-          .to(displacementSprite2.position, 0.4, {x: -150}, 'st')
-          .to(displacementFilter.scale, 0.2, {x: 1}, 'st+=0.2')
+        console.log(event);
+        f.center = [event.data.global.x, event.data.global.y];
+        gsap
+            .fromTo(f, 5, {time: 0}, {time: 3});
+        // console.log(displacementSprite2);
+        // let t1 = gsap.timeline();
+        // t1.addLabel('st')
+        //   .to(displacementFilter.scale, 0.4, {x: -50}, "st")
+        //   .to(displacementFilter2.scale, 0.4, {x: 1}, "st")
+        //   // .to(displacementSprite2.position, 0.8, {x: -450}, 'st')
+        //   // .to(displacementFilter.scale, 0.4, {x: 1}, 'st+=0.4')
     }
     function onMuseOut(event){
-        gsap.to(displacementFilter.scale, {x: 0})
-        gsap.to(displacementSprite2.position, {x: 0})
+        // gsap.to(displacementFilter.scale, {x: 0})
+        // gsap.to(displacementSprite2.position, {x: 0})
     }
 });
 
