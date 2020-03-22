@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import 'jquery-mousewheel';
 import gsap from 'gsap';
+import * as PIXI from 'pixi.js';
 
 export default class{
     constructor(option) {
@@ -11,7 +12,6 @@ export default class{
         this.timeline = gsap.timeline();
         this.animation = false;
         this.start = false;
-
         this.slide.css('z-index', '-1');
 
         $(option.entry).ready(() => {

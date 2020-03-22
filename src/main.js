@@ -8,6 +8,7 @@ import Hammer from 'hammerjs';
 import * as ScrollMagic from "scrollmagic"; // Or use scrollmagic-with-ssr to avoid server rendering problems
 import gsap from "gsap";  // Also works with TweenLite and TimelineLite: import { TweenMax, TimelineMax } from "gsap";
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
+import * as PIXI from "pixi.js";
 
 ScrollMagicPluginGsap(ScrollMagic, gsap);
 
@@ -323,3 +324,54 @@ mc.on("panleft panright tap press", (ev) => {
 //         mvp.setAttribute('content','user-scalable=no,width=450');
 //     }
 // }
+
+
+let element = document.getElementById('image');
+
+let app = new PIXI.Application({
+    width: element.offsetWidth,
+    height: element.offsetHeight
+});
+app.stage.interactive = true;
+let imgg = element.getAttribute('data-src');
+console.log(imgg);
+element.appendChild(app.view);
+let iim = require('img/main-page/displ.png');
+
+let container = new PIXI.Container();
+app.stage.addChild(container);
+
+const displacementSprite = PIXI.Sprite.from(imgg);
+container.addChild(displacementSprite);
+
+app.loader.add(iim).load(()=>{
+    const displacementSprite2 = PIXI.Sprite.from(iim);
+    displacementSprite2.width = element.offsetWidth * 2;
+    displacementSprite2.height = element.offsetHeight * 2;
+    const displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite2);
+    displacementFilter.scale.x = 1;
+    displacementFilter.scale.y = 1;
+    app.stage.addChild(displacementSprite2);
+
+    container.filters = [displacementFilter];
+
+    app.stage
+        .on('mouseover', onMouseOver)
+        .on('mouseout', onMuseOut);
+
+    function onMouseOver(event){
+        console.log(displacementSprite2);
+        let t1 = gsap.timeline();
+        t1.addLabel('st')
+          .to(displacementFilter.scale, 0.2, {x: 50}, "st")
+          .to(displacementSprite2.position, 0.4, {x: -150}, 'st')
+          .to(displacementFilter.scale, 0.2, {x: 1}, 'st+=0.2')
+    }
+    function onMuseOut(event){
+        gsap.to(displacementFilter.scale, {x: 0})
+        gsap.to(displacementSprite2.position, {x: 0})
+    }
+});
+
+
+
