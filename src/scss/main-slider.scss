@@ -13,6 +13,10 @@
     position: absolute;
     top: 500px;
     left: 550px;
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
 
   .slide{

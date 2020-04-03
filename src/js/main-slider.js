@@ -16,13 +16,16 @@ export default class{
         this.slide.css('z-index', '-1');
         this.lineAnimationTimeline = gsap.timeline({
             repeat:100000,
-            repeatDelay: 2
+            repeatDelay: 1
         });
 
         this.lineAnimationTimeline
             .fromTo($(this.option.entry).find('.slider-line') ,
                 {height: '0', opacity: 0},
                 {duration: 1.5,  height: '30px', opacity: 1})
+            .fromTo($(this.option.entry).find('.slider-line'),
+                {height: '30px'},
+                {duration: 1.5, height: '0', top: '530', opacity: 0})
 
         this.loadImageEffect();
 
