@@ -49,6 +49,7 @@ export default class{
                 .addLabel('Start')
                 .set(currentSlideDom, {zIndex: -1})
                 .set(nextSlideDom, {zIndex: 0})
+                .fromTo('.slider-line', {opacity: 1}, {opacity: 0})
                 .fromTo(currentSlideDom.find('.title'), {x: 0}, {
                     x: 50,
                     opacity: 0,
@@ -128,6 +129,7 @@ export default class{
                     duration: 0.3,
                     delay: 1
                 }, 'Start+=0.5')
+                .fromTo('.slider-line', {opacity: 0}, {opacity: 1});
 
             this.currentSlide = nextSlide;
         }
@@ -155,6 +157,7 @@ export default class{
                 .addLabel('Start')
                 .set(currentSlideDom, {zIndex: -1})
                 .set(nextSlideDom, {zIndex: 0})
+                .fromTo('.slider-line', {opacity: 1}, {opacity: 0})
                 .fromTo(currentSlideDom.find('.title'), {x: 0}, {
                     x: -50,
                     opacity: 0,
@@ -234,6 +237,7 @@ export default class{
                     duration: 0.3,
                     delay: 1
                 }, 'Start+=0.5')
+                .fromTo('.slider-line', {opacity: 0}, {opacity: 1});
 
 
             this.currentSlide = prevSlide;

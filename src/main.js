@@ -141,7 +141,8 @@ if($('body').hasClass('info')){
 
                 var contentSM = new ScrollMagic.Scene({
                     triggerElement: element,
-                    triggerHook: 0.8
+                    delay: 1,
+                    triggerHook: 1
                 })
                     .setTween(blockAnimate)
                     .addTo(controller);
@@ -324,6 +325,11 @@ mc.on("panleft panright tap press", (ev) => {
 //     }
 // }
 
+// Viewport
+if(window.innerWidth > 1600) {
+    let view = document.querySelectorAll('meta[name="viewport"]');
+    view[0].setAttribute('content', `width=1600`);
+}
 
 
 
