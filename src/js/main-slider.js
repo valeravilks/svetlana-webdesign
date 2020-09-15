@@ -262,7 +262,8 @@ export default class{
 
         $(this.option.entry).find('.cover').each((i, el)=>{
             // let element = document.getElementById('image');
-            console.log(el);
+            console.log(el.offsetWidth);
+            console.log(el.offsetHeight);
             let app = new PIXI.Application({
                 width: el.offsetWidth,
                 height: el.offsetHeight

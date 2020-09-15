@@ -129,7 +129,7 @@
 
       .num{
         align-self: flex-start;
-        margin-bottom: 70px;
+        margin-bottom: 110px;
         opacity: 0;
         @media (max-width: 1000px) {
           margin-bottom: 25px;
@@ -204,9 +204,14 @@
       }
 
       .img-block{
-        width: 500px;
-        height: 350px;
+        width: 600px;
+        height: 420px;
         position: relative;
+
+        @media (max-width: 1250px) {
+          width: 500px;
+          height: 350px;
+        }
 
         @media (max-width: 1000px) {
           width: 100%;
@@ -216,6 +221,9 @@
           height: 210px;
         }
         .cover{
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
           position: absolute;
           top: 0;
           bottom: 0;
