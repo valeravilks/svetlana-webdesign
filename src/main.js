@@ -303,7 +303,7 @@ $('.link').click( function(e){
     timelineToWork.fromTo('body', {opacity: 1}, {opacity: 0, duration: 0.3});
 });
 
-let pScroll = new ProgressScroll();
+// let pScroll = new ProgressScroll();
 
 var mc = new Hammer(document.body);
 

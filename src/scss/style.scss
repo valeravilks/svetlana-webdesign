@@ -137,6 +137,16 @@ a{
       margin-bottom: 100px;
     }
   }
+  .pre-footer-1{
+    margin-bottom: 100px;
+    @media (max-width: 1000px) {
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 640px) {
+      margin-bottom: 0;
+    }
+  }
 
   .img-1{
     height: 788px;
