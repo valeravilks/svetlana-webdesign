@@ -1,0 +1,64 @@
+doctype html
+html
+    head
+        meta(charser = 'utf-8')
+        link(rel="icon" type="image/png" sizes="16x16" href=require('img/main-page/favicon-16x16.png'))
+        meta(id="vp" name="viewport" content="width=device-width, initial-scale=1.0")
+        title Проекты - Chloe
+    body.work.black
+        .wrapper
+            header.header
+                nav
+                    ul
+                        li
+                            a.link(href='/en') Projects
+                            a.link(href='/en/info.html') Info
+                a.lang(href='/ru/chloe.html') RU
+            section.first
+                .title(data-aos="fade-in") UNIQUE
+                .block
+                    .text Digital agency
+                    .text Design
+                    .text March 2020
+                a.link-b.js-link(href="https://www.behance.net/gallery/94920747/Unique-Agency-website-concept" target='_blank') Behance
+                .content
+                    p Unique is an agency that specializes in branding, services and applications.
+                    p After conducting a competitive analysis, I created a stylish, minimalist design with a focus on studio work.
+        .img-1.mb100-2.js-img-animate.img-cus-1(style='background-image: url(' + require('./../../../img/unique/u-1.jpg') + ')')
+        .wrapper
+            .content-3.mb100-2.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/unique/u-2.jpg'))
+            .content-3.mb100-2.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/unique/u-3.jpg'))
+            .content-3.mb100-2.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/unique/u-4.jpg'))
+            .content-3.mb100-2.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/unique/u-5.jpg'))
+            .content-3.mb100-2.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/unique/u-6.jpg'))
+            .content-3.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/unique/u-7.jpg'))
+            .content-2
+                p.js-text-animate An adaptive version was also designed, through which the site is displayed correctly on all devices.
+            .content-4
+                            .bl.bl-1.js-mob-animate
+                                img.img-2(src=require('./../../../img/unique/u-8.png'))
+                                img.img-2(src=require('./../../../img/unique/u-9.png'))
+                                img.img-2(src=require('./../../../img/unique/u-10.png'))
+                            .bl.js-mob-animate
+                                img.img-2(src=require('./../../../img/unique/u-11.png'))
+                                img.img-2(src=require('./../../../img/unique/u-12.png'))
+                                img.img-2(src=require('./../../../img/unique/u-13.png'))
+        .work-footer
+            .wrapper.w-foot
+                .f-dop
+                    .cont(data-cursor-hover)
+                        .block-1
+                            .text-1 Следующий проект
+                            .text-2(data-text="BOSTON" data-to-work2="/ru/boston.html") BOSTON
+                        .block-2(data-to-work2="/ru/boston.html")
+                            img(src=require('./../../../img/main-page/03-min.jpg'))
+                            .img-help
+        footer.black
+            .wrapper
+                .text-2 &#169 2020 Svetlana Tsymbalyuk
