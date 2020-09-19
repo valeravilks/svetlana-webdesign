@@ -11,7 +11,7 @@ let conf = {
     devtool: 'source-map',
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'styles.css',
+            filename: 'styles.[hash].css',
         }),
         new HtmlWebpackPlugin({
             template: 'src/html/index.pug'
@@ -115,7 +115,7 @@ let conf = {
                     {
                         loader: 'url-loader',
                         options: {
-                            name: '[name].[ext]',
+                            name: '[name].[hash].[ext]',
                             publicPath: '/images/',
                             outputPath: 'images/',
                             limit: 20
