@@ -218,7 +218,7 @@ function onMouseMove(e) {
 // Hover an element
 function onMouseHover() {
     gsap.to($bigBall, .3, {
-        scale: 4
+        scale: 2
     })
 }
 function onMouseHoverOut() {
