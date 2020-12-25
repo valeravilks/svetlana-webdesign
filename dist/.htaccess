@@ -4,3 +4,4 @@ AddCharset utf-8 .html
 #AddType 'text/html; charset=UTF-8' html
 #RewriteCond %{REQUEST_FILENAME} !-f
 #RewriteRule ^([^.]+)$ $1.html [NC,L]
+RedirectMatch ^/$ /ru
