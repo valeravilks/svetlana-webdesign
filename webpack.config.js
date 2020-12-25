@@ -159,8 +159,7 @@ let conf = {
         ],
     },
     devServer: {
-        contentBase: "./dist",
-        host: '192.168.1.241'
+        contentBase: "./dist"
     }
 };
 
