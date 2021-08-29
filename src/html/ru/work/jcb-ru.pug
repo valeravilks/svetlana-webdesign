@@ -1,0 +1,72 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charser = 'utf-8')
+        link(rel="icon" type="image/png" sizes="16x16" href=require('img/main-page/favicon-16x16.png'))
+        meta(id="vp" name="viewport" content="width=device-width, initial-scale=1.0")
+        title Проекты - Артгид
+        include ../../analytics
+    body.work
+        .work-content
+            .wrapper
+                header.header
+                    nav
+                        ul
+                            li
+                                a.link(href='/ru') Проекты
+                                a.link(href='/ru/info.html') Инфо
+                    a.lang(href='/en/art-guide.html') EN
+                section.first
+                    .title(data-aos="fade-in") JCB
+                    .block
+                        .text Корпоративный сайт
+                        .text Проектирование и дизайн
+                        .text Май 2020
+                    a.link-b.js-link(href="https://www.behance.net/gallery/108597017/JCB-corporate-website-redesign" target='_blank') Behance
+                    .content
+                        p JCB — британская компания, которая производит погрузчики, экскаваторы, тракторы, самосвалы и аналогичную технику. Сегодня JCB входит в тройку мировых лидеров по производству строительной техники.
+                        p Целью моей работы было создание нового дизайна существующего сайта, который подчеркнёт премиальность и статусность компании.
+        .img-1.js-img-animate(style='background-image: url(' + require('./../../../img/artguide/art-1600-min.jpg') + ')')
+        .wrapper
+            .content-2
+                p.js-text-animate Лаконичное оформление страниц в стиле минимализма подчёркивает смысловую насыщенность сайта и облегчает восприятие информации.
+            .content-3.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/artguide/artguide-main.jpg'))
+            .content-2
+                p.js-text-animate Также была проектирована адаптивная версия сайта, посредством которой сайт корректно отображается на все устройствах.
+            .content-4
+                .bl.js-mob-animate
+                    img.img-2(src=require('img/artguide/1-art.png'))
+                    img.img-2(src=require('./../../../img/artguide/2-min.png'))
+                    img.img-2(src=require('./../../../img/artguide/3-min.png'))
+            .content-3.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/artguide/artguide-3.jpg'))
+            .content-4.mt-100-2
+                .bl.bl-1.js-mob-animate
+                    img.img-2(src=require('./../../../img/artguide/4-min.png'))
+                    img.img-2(src=require('./../../../img/artguide/5-min.png'))
+                    img.img-2(src=require('./../../../img/artguide/6-min.png'))
+                .bl.js-mob-animate
+                    img.img-2(src=require('./../../../img/artguide/7-min.png'))
+                    img.img-2(src=require('./../../../img/artguide/8-min.png'))
+                    img.img-2(src=require('./../../../img/artguide/9-min.png'))
+            .content-6
+                .block-1.js-img-animate
+                    img(src=require('./../../../img/artguide/arguide-1.jpg'))
+                .block-2.js-mob-animate
+                    img(src=require('./../../../img/artguide/650-min.png'))
+            .content-3.js-img-animate.pre-footer(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/artguide/artguide-2.jpg'))
+        .work-footer
+            .wrapper.w-foot
+                .f-dop
+                    .cont(data-cursor-hover)
+                        .block-1
+                            .text-1 Следующий проект
+                            .text-2(data-text="CHLOE" data-to-work2="/ru/chloe.html") CHLOE
+                        .block-2(data-to-work2="/ru/chloe.html")
+                            img(src=require('./../../../img/main-page/02-min.jpg'))
+                            .img-help
+        footer.black
+            .wrapper
+                .text-2 &#169 2021 Svetlana Tsymbalyuk
