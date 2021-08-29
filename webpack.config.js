@@ -41,6 +41,10 @@ let conf = {
             template: 'src/html/ru/work/unique-ru.pug'
         }),
         new HtmlWebpackPlugin({
+            filename: "ru/jcb.html",
+            template: 'src/html/ru/work/jcb-ru.pug'
+        }),
+        new HtmlWebpackPlugin({
             filename: "en/unique.html",
             template: 'src/html/en/work/unique-ru.pug'
         }),
