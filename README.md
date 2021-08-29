@@ -18,6 +18,7 @@ In the work on the site used modern tools and technologies, such as:
 * PixiJs
 * Webpack
 * PhpStorm
+* NodeJs (v14.17.5)
 
 ![](for-readme/2.gif)
 
