@@ -364,6 +364,24 @@ a{
       }
     }
   }
+
+  .content-11 {
+    max-width: 600px;
+    margin: 0 auto;
+
+    &.mb {
+      margin-bottom: 200px;
+  
+      @media (max-width: 1000px) {
+        margin-bottom: 150px;
+      }
+  
+      @media (max-width: 640px) {
+        margin-bottom: 100px;
+      }
+    }
+  }
+
   .work-footer{
     background-color: #282828;
 
@@ -481,6 +499,9 @@ a{
         transition: opacity .3s ease;
       }
     }
+  }
+  .mt {
+    margin-top: 100px;
   }
 }
 footer{

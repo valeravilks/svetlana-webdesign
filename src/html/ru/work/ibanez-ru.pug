@@ -1,0 +1,73 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charser = 'utf-8')
+        link(rel="icon" type="image/png" sizes="16x16" href=require('img/main-page/favicon-16x16.png'))
+        meta(id="vp" name="viewport" content="width=device-width, initial-scale=1.0")
+        title Проекты - Артгид
+        include ../../analytics
+    body.work
+        .work-content
+            .wrapper
+                header.header
+                    nav
+                        ul
+                            li
+                                a.link(href='/ru') Проекты
+                                a.link(href='/ru/info.html') Инфо
+                    a.lang(href='/en/art-guide.html') EN
+                section.first
+                    .title(data-aos="fade-in") IBANEZ 
+                    .block
+                        .text Корпоративный сайт
+                        .text Проектирование и дизайн
+                        .text Октябрь 2020
+                    a.link-b.js-link(href="https://www.behance.net/gallery/111523361/Ibanez-new-website-redesign-concept" target='_blank') Behance
+                    .content
+                        p Ibanez — одна из первых японских компаний, производящих музыкальные инструменты, которая заявила о себе во всем мире.
+                        p Этот проект представляет собой новый дизайн корпоративного сайта популярного производителя гитар. В нём я хотела отразить своё видение  визуальной концепции и передать определённую атмосферу рок-музыки с помощью ярких заголовков и нестандартной сетки.
+        .img-1.js-img-animate(style='background-image: url(' + require('./../../../img/ibanez/main.jpg') + ')')
+        .wrapper
+            .content-2
+                p.js-text-animate На главной странице представлены анонсы внутренних страниц с возможностью перехода.
+            .content-3.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/ibanez/img-1.jpg'))
+            .content-2
+                p.js-text-animate Также была спроектирована адаптивная версия, посредством которой сайт корректно отображается на всех устройствах.
+            .content-11.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/ibanez/img-2.jpg'))
+            .content-2
+                p.js-text-animate Страница каталога поддерживает стиль минимализма. 
+            .content-3.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/ibanez/img-3.jpg'))
+            .content-2
+                p.js-text-animate Раздел “Электрогитары” содержит обложку, блок с особенностями продукта, авторскими гитарами музыкантов и линейкой серий соответствующей категории.
+            .content-3.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/ibanez/img-4.jpg'))
+            .content-2
+                p.js-text-animate На странице определённой серии гитар можно прочитать её описание, технические характеристики и перейти к моделям инструментов. Дизайн страниц с акустическими и бас-гитарами выполнен в тёмных тонах.
+            .content-3.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/ibanez/img-5.jpg'))
+            .content-3.mt.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/ibanez/img-6.jpg'))
+            .content-2
+                p.js-text-animate Страницы артистов предлагают ознакомиться с биографией и фирменными гитарами музыкантов.
+            .content-3.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/ibanez/img-7.jpg'))
+            .content-3.mt.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/ibanez/img-8.jpg'))
+            .content-11.mt.mb.js-img-animate(data-aos="fade-up")
+                img.img-2(src=require('./../../../img/ibanez/img-9.jpg'))
+        .work-footer
+            .wrapper.w-foot
+                .f-dop
+                    .cont(data-cursor-hover)
+                        .block-1
+                            .text-1 Следующий проект
+                            .text-2(data-text="CHLOE" data-to-work2="/ru/chloe.html") CHLOE
+                        .block-2(data-to-work2="/ru/chloe.html")
+                            img(src=require('./../../../img/main-page/02-min.jpg'))
+                            .img-help
+        footer.black
+            .wrapper
+                .text-2 &#169 2021 Svetlana Tsymbalyuk
