@@ -597,6 +597,19 @@ footer{
         line-height: 150%;
         color: #282828;
 
+        &.text {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 130%;
+          color: #898989;
+        }
+      }
+
+      hr {
+        margin: 30px 0 20px;
+        border: none;
+        border-top: 1px solid #D7D7D7;
       }
 
       img{
@@ -725,4 +738,20 @@ body::-webkit-scrollbar {
 /* Hide scrollbar for IE and Edge */
 body {
   -ms-overflow-style: none;
+}
+.mb-30 {
+  margin-bottom: 30px!important;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #00002810;
+
+  div {
+    font-size: 10px;
+    line-height: 12px;
+    color: #898989;
+    padding: 30px;
+  }
 }
