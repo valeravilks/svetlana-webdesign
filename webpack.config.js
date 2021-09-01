@@ -71,7 +71,15 @@ let conf = {
         new HtmlWebpackPlugin({
             filename: "en/info.html",
             template: 'src/html/en/info.pug'
-        })
+        }),
+        new HtmlWebpackPlugin({
+            filename: "en/jcb.html",
+            template: 'src/html/en/work/jcb-ru.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: "en/ibanez.html",
+            template: 'src/html/en/work/ibanez-ru.pug'
+        }),
     ],
     module: {
         rules: [
