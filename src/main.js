@@ -26,11 +26,11 @@ window.onload = function(){
                     let blockAnimate = gsap.timeline();
 
                     blockAnimate
-                        .fromTo($(element), {y: 50, opacity: 0}, {y: 0, opacity: 1, duration: 0.3})
+                        .fromTo($(element), {y: 20, opacity: 0}, {y: 0, opacity: 1, duration: 0.3})
 
                     var contentSM = new ScrollMagic.Scene({
                         triggerElement: element,
-                        triggerHook: 0.8
+                        triggerHook: 1
                     })
                         .setTween(blockAnimate)
                         .addTo(controller);
@@ -44,7 +44,7 @@ window.onload = function(){
 
                     var contentSM = new ScrollMagic.Scene({
                         triggerElement: element,
-                        triggerHook: 0.8
+                        triggerHook: 1
                     })
                         .setTween(blockAnimate)
                         .addTo(controller);
