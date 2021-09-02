@@ -532,7 +532,7 @@ a {
   color: #282828; }
 
 .first {
-  padding: 100px 0 100px 550px; }
+  padding: 100px 100px 100px 550px; }
   @media (max-width: 1230px) {
     .first {
       padding: 100px 0 100px 260px; } }
@@ -603,7 +603,7 @@ a {
     height: 788px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top center; }
+    background-position: center center; }
     @media (max-width: 1230px) {
       .work .img-1 {
         height: 492px; } }
@@ -622,7 +622,7 @@ a {
       .work p {
         font-size: 16px; } }
   .work .content-2 {
-    padding: 100px 100px 100px 550px; }
+    padding: 150px 100px 100px 550px; }
     @media (max-width: 1230px) {
       .work .content-2 {
         padding: 100px 0 100px 260px; } }
@@ -631,6 +631,17 @@ a {
         padding: 70px 0; } }
     @media (max-width: 640px) {
       .work .content-2 {
+        padding: 50px 0; } }
+  .work .content-main-text {
+    padding: 100px 100px 100px 550px; }
+    @media (max-width: 1230px) {
+      .work .content-main-text {
+        padding: 100px 0 100px 260px; } }
+    @media (max-width: 1000px) {
+      .work .content-main-text {
+        padding: 70px 0; } }
+    @media (max-width: 640px) {
+      .work .content-main-text {
         padding: 50px 0; } }
   .work .content-3 {
     padding: 0 100px; }
@@ -680,6 +691,39 @@ a {
     @media (max-width: 640px) {
       .work .content-6 {
         padding: 0 0 50px; } }
+  .work .content-8 {
+    padding: 0 100px 0 280px;
+    display: flex;
+    justify-content: space-between; }
+    @media (max-width: 1230px) {
+      .work .content-8 {
+        padding: 0 0 0 142px; } }
+    @media (max-width: 1000px) {
+      .work .content-8 {
+        padding: 0 100px; } }
+    @media (max-width: 640px) {
+      .work .content-8 {
+        padding: 0; } }
+    .work .content-8.mb {
+      margin-bottom: 200px; }
+      @media (max-width: 1000px) {
+        .work .content-8.mb {
+          margin-bottom: 150px; } }
+      @media (max-width: 640px) {
+        .work .content-8.mb {
+          margin-bottom: 100px; } }
+    .work .content-8.mt-70 {
+      margin-top: 70px; }
+    .work .content-8 .col {
+      width: 206px; }
+      @media (max-width: 1000px) {
+        .work .content-8 .col {
+          width: 100px; } }
+      @media (max-width: 640px) {
+        .work .content-8 .col {
+          width: 70px; } }
+    .work .content-8 img {
+      height: auto; }
   .work .content-7 {
     display: flex;
     padding: 0 150px;
@@ -714,6 +758,17 @@ a {
       @media (max-width: 640px) {
         .work .content-7 .block-2 img {
           max-width: 80px; } }
+  .work .content-11 {
+    max-width: 600px;
+    margin: 0 auto; }
+    .work .content-11.mb {
+      margin-bottom: 200px; }
+      @media (max-width: 1000px) {
+        .work .content-11.mb {
+          margin-bottom: 150px; } }
+      @media (max-width: 640px) {
+        .work .content-11.mb {
+          margin-bottom: 100px; } }
   .work .work-footer {
     background-color: #282828; }
     .work .work-footer .w-foot {
@@ -768,23 +823,28 @@ a {
         .work .work-footer .f-dop {
           padding: 55px 0 100px; } }
     .work .work-footer .cont {
-      display: flex;
       width: 100%;
-      align-items: center;
-      justify-content: center; }
-      @media (max-width: 1000px) {
+      display: grid;
+      grid-template-columns: 500px 650px;
+      grid-gap: 50px; }
+      @media (max-width: 1230px) {
         .work .work-footer .cont {
-          max-width: 600px;
-          flex-wrap: wrap; } }
+          grid-template-columns: 410px 500px; } }
+      @media (max-width: 1230px) {
+        .work .work-footer .cont {
+          grid-template-columns: 1fr; } }
     .work .work-footer .block-1 {
-      margin-right: 50px; }
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse; }
       @media (max-width: 1000px) {
         .work .work-footer .block-1 {
-          width: 100%; } }
+          flex-direction: row; } }
       @media (max-width: 640px) {
         .work .work-footer .block-1 {
           margin-right: 0; } }
     .work .work-footer .block-2 {
+      align-self: center;
       position: relative;
       overflow: hidden; }
       .work .work-footer .block-2 img {
@@ -801,6 +861,8 @@ a {
         background-color: #282828;
         opacity: 0.6;
         transition: opacity .3s ease; }
+  .work .mt {
+    margin-top: 100px; }
 
 footer.black {
   background-color: #282828;
@@ -814,9 +876,7 @@ footer.white {
 
 footer .wrapper {
   height: 72px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center; }
+  display: flex; }
 
 footer .text-2 {
   color: #eaeaea;
@@ -838,6 +898,13 @@ footer .text-2 {
     .info .content {
       margin-bottom: 70px;
       flex-wrap: wrap; } }
+  .info .content .content-2 {
+    display: flex;
+    margin-bottom: 200px; }
+    @media (max-width: 1000px) {
+      .info .content .content-2 {
+        margin-bottom: 70px;
+        flex-wrap: wrap; } }
   .info .content .block-1 {
     width: 500px;
     text-align: right;
@@ -871,6 +938,16 @@ footer .text-2 {
     font-size: 20px;
     line-height: 150%;
     color: #282828; }
+    .info .content .block-2 p.text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 130%;
+      color: #898989; }
+  .info .content .block-2 hr {
+    margin: 30px 0 20px;
+    border: none;
+    border-top: 1px solid #D7D7D7; }
   .info .content .block-2 img {
     margin-right: 50px; }
     .info .content .block-2 img:last-child {
@@ -956,5 +1033,23 @@ footer .text-2 {
 body {
   -ms-overflow-style: none; }
 
+.mb-30 {
+  margin-bottom: 30px !important; }
 
-/*# sourceMappingURL=styles.2b82531b451ea6eb7363.css.map*/
+footer {
+  border-top: 1px solid #00002810; }
+  footer .text {
+    margin-left: 550px;
+    font-size: 10px;
+    line-height: 12px;
+    color: #898989;
+    padding: 30px 0; }
+    @media screen and (max-width: 900px) {
+      footer .text {
+        margin: 0 auto; } }
+
+.p-v {
+  padding: 100px 0 0 0 !important; }
+
+
+/*# sourceMappingURL=styles.db3cf07c848fc4831714.css.map*/
