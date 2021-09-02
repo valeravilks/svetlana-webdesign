@@ -470,27 +470,37 @@ a{
     }
 
     .cont{
-      display: flex;
       width: 100%;
+      display: grid;
+      grid-template-columns: 500px 650px;
+      grid-gap: 50px;
 
-      align-items: center;
-      justify-content: center;
-      @media (max-width: 1000px) {
-        max-width: 600px;
-        flex-wrap: wrap;
+      @media (max-width: 1230px) {
+        grid-template-columns: 410px 500px;
       }
 
+      @media (max-width: 1230px) {
+        grid-template-columns: 1fr;
+      }
     }
+
+    .dop {
+      
+    }
+
     .block-1{
-      margin-right: 50px;
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
       @media (max-width: 1000px) {
-       width: 100%;
+       flex-direction: row;
       }
       @media (max-width: 640px) {
         margin-right: 0;
       }
     }
     .block-2{
+      align-self: center;
       position: relative;
       //height: 350px;
       overflow: hidden;
