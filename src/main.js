@@ -180,28 +180,28 @@ let cursorHtml = `
       </div>
 `;
 
-let nodeCursor = document.createElement('div');
-nodeCursor.classList.add('cursor');
-nodeCursor.innerHTML = cursorHtml;
-document.body.appendChild(nodeCursor);
+// let nodeCursor = document.createElement('div');
+// nodeCursor.classList.add('cursor');
+// nodeCursor.innerHTML = cursorHtml;
+// document.body.appendChild(nodeCursor);
 
-const $bigBall = document.querySelector('.cursor__ball--big');
-const $smallBall = document.querySelector('.cursor__ball--small');
-const $hoverables = document.querySelectorAll('a');
+// const $bigBall = document.querySelector('.cursor__ball--big');
+// const $smallBall = document.querySelector('.cursor__ball--small');
+// const $hoverables = document.querySelectorAll('a');
 
-// Listeners
-const $hoverables2 = document.querySelectorAll('[data-cursor-hover]');
-document.body.addEventListener('mousemove', onMouseMove);
-for (let i = 0; i < $hoverables2.length; i++) {
-    $hoverables2[i].addEventListener('mouseenter', onMouseHover);
-    $hoverables2[i].addEventListener('mouseleave', onMouseHoverOut);
-}
+// // Listeners
+// const $hoverables2 = document.querySelectorAll('[data-cursor-hover]');
+// document.body.addEventListener('mousemove', onMouseMove);
+// for (let i = 0; i < $hoverables2.length; i++) {
+//     $hoverables2[i].addEventListener('mouseenter', onMouseHover);
+//     $hoverables2[i].addEventListener('mouseleave', onMouseHoverOut);
+// }
 
-document.body.addEventListener('mousemove', onMouseMove);
-for (let i = 0; i < $hoverables.length; i++) {
-    $hoverables[i].addEventListener('mouseenter', onMouseHover);
-    $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-}
+// document.body.addEventListener('mousemove', onMouseMove);
+// for (let i = 0; i < $hoverables.length; i++) {
+//     $hoverables[i].addEventListener('mouseenter', onMouseHover);
+//     $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+// }
 
 // Move the cursor
 function onMouseMove(e) {

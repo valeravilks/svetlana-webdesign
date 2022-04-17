@@ -11,13 +11,13 @@ body{
   font-family: "SF Pro Display", sans-serif;
   color: #282828;
   background-color: #F9F9F9;
-  cursor: none;
+  // cursor: none;
   min-height: 100vh;
   overflow-x: hidden;
   min-width: 300px;
 }
 a{
-  cursor: none;
+  // cursor: none;
 }
 
 .mb100{
@@ -474,6 +474,7 @@ a{
       display: grid;
       grid-template-columns: 500px 650px;
       grid-gap: 50px;
+      cursor: pointer;
 
       @media (max-width: 1230px) {
         grid-template-columns: 410px 500px;
