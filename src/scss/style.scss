@@ -683,6 +683,14 @@ footer{
     }
   }
 
+  &.arrow-2 {
+    &:before {
+      @media (max-width: 640px) {
+        right: -6px
+      }
+    }
+  }
+
   &:before{
     content: url('./../img/link-arrow.png');
     position: absolute;
@@ -690,6 +698,7 @@ footer{
     opacity: 0;
     transition: opacity .3s ease, transform .3s ease;
     transform: translateX(-10  px);
+    bottom: 0;
 
     @media (max-width: 1000px) {
       opacity: 1;
