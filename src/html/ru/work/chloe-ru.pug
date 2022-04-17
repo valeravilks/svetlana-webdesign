@@ -7,14 +7,16 @@ html
         title Проекты - Chloe
         include ../../analytics
     body.work
-        .wrapper
-            header.header
-                nav
-                    ul
-                        li
-                            a.link(href='/ru') Проекты
-                            a.link(href='/ru/info.html') Инфо
-                a.lang(href='/en/chloe.html') EN
+        .header__bg
+            .wrapper.header__wrapper
+                header.header
+                    nav
+                        ul
+                            li
+                                a.link(href='/ru') Проекты
+                                a.link(href='/ru/info.html') Инфо
+                    a.lang(href='/en/chloe.html') EN
+        .wrapper.content-mr
             section.first
                 .title(data-aos="fade-in") CHLOE
                 .block

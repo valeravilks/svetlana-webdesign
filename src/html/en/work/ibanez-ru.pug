@@ -7,8 +7,8 @@ html(lang="en")
         title Project - IBANEZ
         include ../../analytics
     body.work
-        .work-content
-            .wrapper
+        .header__bg
+            .wrapper.header__wrapper
                 header.header
                     nav
                         ul
@@ -16,16 +16,17 @@ html(lang="en")
                                 a.link(href='/en') Projects
                                 a.link(href='/en/info.html') Info
                     a.lang(href='/ru/ibanez.html') RU
-                section.first
-                    .title(data-aos="fade-in") IBANEZ 
-                    .block
-                        .text Corporate website
-                        .text Design
-                        .text October 2020
-                    a.link-b.js-link(href="https://www.behance.net/gallery/111523361/Ibanez-new-website-redesign-concept" target='_blank') Behance
-                    .content
-                        p Ibanez is one of the first Japanese musical instrument companies to make a name for itself all over the world.
-                        p This project is a new design of the corporate website of a popular guitar manufacturer. In it, I wanted to reflect my vision of the visual concept and convey a certain atmosphere of rock music with the help of bright headlines and a non-standard grid.
+        .wrapper.content-mr
+            section.first
+                .title(data-aos="fade-in") IBANEZ 
+                .block
+                    .text Corporate website
+                    .text Design
+                    .text October 2020
+                a.link-b.js-link(href="https://www.behance.net/gallery/111523361/Ibanez-new-website-redesign-concept" target='_blank') Behance
+                .content
+                    p Ibanez is one of the first Japanese musical instrument companies to make a name for itself all over the world.
+                    p This project is a new design of the corporate website of a popular guitar manufacturer. In it, I wanted to reflect my vision of the visual concept and convey a certain atmosphere of rock music with the help of bright headlines and a non-standard grid.
         .img-1(style='background-image: url(' + require('./../../../img/ibanez/main.jpg') + ')')
         .wrapper
             .content-main-text

@@ -1,6 +1,7 @@
 .header{
   display: flex;
-  padding-top: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   //justify-content: flex-end;
   @media (max-width: 1000px) {
     justify-content: flex-end;
@@ -13,6 +14,14 @@
 
   @media (max-width: 640px) {
     padding-top: 20px;
+  }
+
+  &__bg {
+    background: #F9F9F9;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
   }
 
   .lang{

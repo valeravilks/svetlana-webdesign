@@ -7,8 +7,8 @@ html(lang='ru')
         title Проекты - JCB
         include ../../analytics
     body.work
-        .work-content
-            .wrapper
+        .header__bg
+            .wrapper.header__wrapper
                 header.header
                     nav
                         ul
@@ -16,16 +16,17 @@ html(lang='ru')
                                 a.link(href='/ru') Проекты
                                 a.link(href='/ru/info.html') Инфо
                     a.lang(href='/en/jcb.html') EN
-                section.first
-                    .title(data-aos="fade-in") JCB
-                    .block
-                        .text Корпоративный сайт
-                        .text Проектирование и дизайн
-                        .text Май 2020
-                    a.link-b.js-link(href="https://www.behance.net/gallery/108597017/JCB-corporate-website-redesign" target='_blank') Behance
-                    .content
-                        p JCB — британская компания, которая производит погрузчики, экскаваторы, тракторы, самосвалы и аналогичную технику. Сегодня JCB входит в тройку мировых лидеров по производству строительной техники.
-                        p Целью моей работы было создание нового дизайна существующего сайта, который подчеркнёт премиальность и статусность компании.
+        .wrapper.content-mr
+            section.first
+                .title(data-aos="fade-in") JCB
+                .block
+                    .text Корпоративный сайт
+                    .text Проектирование и дизайн
+                    .text Май 2020
+                a.link-b.js-link(href="https://www.behance.net/gallery/108597017/JCB-corporate-website-redesign" target='_blank') Behance
+                .content
+                    p JCB — британская компания, которая производит погрузчики, экскаваторы, тракторы, самосвалы и аналогичную технику. Сегодня JCB входит в тройку мировых лидеров по производству строительной техники.
+                    p Целью моей работы было создание нового дизайна существующего сайта, который подчеркнёт премиальность и статусность компании.
         .img-1(style='background-image: url(' + require('./../../../img/jcb/main.jpg') + ')')
         .wrapper
             .content-main-text

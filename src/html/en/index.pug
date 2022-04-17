@@ -7,7 +7,7 @@ html(lang="en")
         title Проекты
         include ../analytics
     body.home
-        div(class='wrapper')
+        .wrapper.header__wrapper
             header.header
                 nav
                     ul
@@ -15,6 +15,7 @@ html(lang="en")
                             a.link.active(href='/en') Projects
                             a.link(href='/en/info.html') Info
                 a.lang(href='/ru') RU
+        .wrapper.slider__wrapper
             .slider
                 .slider-list
                     .slide

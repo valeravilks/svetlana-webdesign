@@ -7,14 +7,16 @@ html(lang='ru')
         title Project - Chloe
         include ../../analytics
     body.work
-        .wrapper
-            header.header
-                nav
-                    ul
-                        li
-                            a.link(href='/en') Projects
-                            a.link(href='/en/info.html') Info
-                a.lang(href='/ru/chloe.html') RU
+        .header__bg
+            .wrapper.header__wrapper
+                header.header
+                    nav
+                        ul
+                            li
+                                a.link(href='/en') Projects
+                                a.link(href='/en/info.html') Info
+                    a.lang(href='/ru/chloe.html') RU
+        .wrapper.content-mr
             section.first
                 .title(data-aos="fade-in") CHLOE
                 .block

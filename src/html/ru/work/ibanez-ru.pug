@@ -7,8 +7,8 @@ html(lang='ru')
         title Проекты - IBANEZ
         include ../../analytics
     body.work
-        .work-content
-            .wrapper
+        .header__bg
+            .wrapper.header__wrapper
                 header.header
                     nav
                         ul
@@ -16,16 +16,17 @@ html(lang='ru')
                                 a.link(href='/ru') Проекты
                                 a.link(href='/ru/info.html') Инфо
                     a.lang(href='/en/ibanez.html') EN
-                section.first
-                    .title(data-aos="fade-in") IBANEZ 
-                    .block
-                        .text Корпоративный сайт
-                        .text Проектирование и дизайн
-                        .text Октябрь 2020
-                    a.link-b.js-link(href="https://www.behance.net/gallery/111523361/Ibanez-new-website-redesign-concept" target='_blank') Behance
-                    .content
-                        p Ibanez — одна из первых японских компаний, производящих музыкальные инструменты, которая заявила о себе во всем мире.
-                        p Этот проект представляет собой новый дизайн корпоративного сайта популярного производителя гитар. В нём я хотела отразить своё видение  визуальной концепции и передать определённую атмосферу рок-музыки с помощью ярких заголовков и нестандартной сетки.
+        .wrapper.content-mr
+            section.first
+                .title(data-aos="fade-in") IBANEZ 
+                .block
+                    .text Корпоративный сайт
+                    .text Проектирование и дизайн
+                    .text Октябрь 2020
+                a.link-b.js-link(href="https://www.behance.net/gallery/111523361/Ibanez-new-website-redesign-concept" target='_blank') Behance
+                .content
+                    p Ibanez — одна из первых японских компаний, производящих музыкальные инструменты, которая заявила о себе во всем мире.
+                    p Этот проект представляет собой новый дизайн корпоративного сайта популярного производителя гитар. В нём я хотела отразить своё видение  визуальной концепции и передать определённую атмосферу рок-музыки с помощью ярких заголовков и нестандартной сетки.
         .img-1(style='background-image: url(' + require('./../../../img/ibanez/main.jpg') + ')')
         .wrapper
             .content-main-text

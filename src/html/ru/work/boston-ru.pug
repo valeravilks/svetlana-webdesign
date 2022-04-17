@@ -7,14 +7,16 @@ html
         title Проекты - Boston
         include ../../analytics
     body.work
-        .wrapper
-            header.header
-                nav
-                    ul
-                        li
-                            a.link(href='/ru') Проекты
-                            a.link(href='/ru/info.html') Инфо
-                a.lang(href='/en/boston.html') EN
+        .header__bg
+            .wrapper.header__wrapper
+                header.header
+                    nav
+                        ul
+                            li
+                                a.link(href='/ru') Проекты
+                                a.link(href='/ru/info.html') Инфо
+                    a.lang(href='/en/boston.html') EN
+        .wrapper.content-mr
             section.first
                 .title(data-aos="fade-in") BOSTON
                 .block
