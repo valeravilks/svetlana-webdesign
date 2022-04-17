@@ -21,6 +21,8 @@ export default class{
 
             $(option.entry).css('opacity', 1);
             this.next();
+
+            setInterval(() => this.next(), 7000);
         });
     }
     next(){
