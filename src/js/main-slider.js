@@ -14,18 +14,6 @@ export default class{
         this.animation = false;
         this.start = false;
         this.slide.css('z-index', '-1');
-        this.lineAnimationTimeline = gsap.timeline({
-            repeat:100000,
-            repeatDelay: 1
-        });
-
-        this.lineAnimationTimeline
-            .fromTo($(this.option.entry).find('.slider-line') ,
-                {height: '0', opacity: 0},
-                {duration: 1.5,  height: '30px', opacity: 1})
-            .fromTo($(this.option.entry).find('.slider-line'),
-                {height: '30px'},
-                {duration: 1.5, height: '0', top: '530', opacity: 0})
 
         this.loadImageEffect();
 
@@ -62,7 +50,6 @@ export default class{
                 .addLabel('Start')
                 .set(currentSlideDom, {zIndex: -1})
                 .set(nextSlideDom, {zIndex: 0})
-                .fromTo('.slider-line', {opacity: 1}, {opacity: 0})
                 .fromTo(currentSlideDom.find('.title'), {x: 0}, {
                     x: 50,
                     opacity: 0,
@@ -142,7 +129,6 @@ export default class{
                     duration: 0.3,
                     delay: 1
                 }, 'Start+=0.5')
-                .fromTo('.slider-line', {opacity: 0}, {opacity: 1});
 
             this.currentSlide = nextSlide;
         }
@@ -170,7 +156,6 @@ export default class{
                 .addLabel('Start')
                 .set(currentSlideDom, {zIndex: -1})
                 .set(nextSlideDom, {zIndex: 0})
-                .fromTo('.slider-line', {opacity: 1}, {opacity: 0})
                 .fromTo(currentSlideDom.find('.title'), {x: 0}, {
                     x: -50,
                     opacity: 0,
@@ -250,7 +235,6 @@ export default class{
                     duration: 0.3,
                     delay: 1
                 }, 'Start+=0.5')
-                .fromTo('.slider-line', {opacity: 0}, {opacity: 1});
 
 
             this.currentSlide = prevSlide;
